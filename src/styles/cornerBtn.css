@@ -1,0 +1,20 @@
+.sideButtonWr {
+    display: flex;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+
+    background-color: #191919;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 60px;
+    width: 60px;
+    border-radius: 50% 10px 50% 50%;
+}
+
+.messageIcon {
+    font-size: 30px;
+}
