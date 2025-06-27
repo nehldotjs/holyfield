@@ -13,7 +13,6 @@ import Terms from "./Components/Terms";
 function App() {
   return (
     <div>
-      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -22,6 +21,7 @@ function App() {
       </Routes>
       <Footer />
       <CorneredButton />
+      <Nav />
     </div>
   );
 }
