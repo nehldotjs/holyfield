@@ -11,9 +11,10 @@
    font-weight: 300;
    /* Light weight */
  }
+
  @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Jersey+15&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
- 
- 
+
+
  * {
    font-family: "Mulish", "GFS Didot", sans-serif, 'Gilroy', sans-serif;
    padding: 0px;
@@ -22,13 +23,16 @@
    scroll-behavior: smooth;
  }
 
- body{
-  background-color: #f9f9f9;
+ body {
+   background-color: #f9f9f9;
  }
 
- .app-nav-wrapper{
-  display: flex;
-  width: 100%;
-  height: auto;
-  z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
- }
+ .app-nav-wrapper {
+   display: flex;
+   width: 100%;
+   height: auto;
+    height: auto;
+   position: fixed;
+   top: 15px;
+   z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  }
