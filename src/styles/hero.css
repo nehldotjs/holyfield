@@ -499,7 +499,7 @@
     height: auto;
     width: 100%;
     display: flex;
-    z-index: 1;
+    z-index: 0;
 }
 
 /* ____________________________________ */
