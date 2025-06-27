@@ -16,6 +16,7 @@ function Nav() {
         <div className="nav-web-links">
           <Link className='webNavLinks' to="/">Home</Link>
           <Link className='webNavLinks' to="/about">About</Link>
+          <Link className='webNavLinks' to="/faqs">Faqs</Link>
           <a className='webNavLinks' href="#" >Contact</a>
         </div>
         <div className="nav-mobile-links">

@@ -89,7 +89,7 @@ const StyledWrapper = styled.div`
     height: 60px;
     width: 60px;
     border-radius: 100%;
-    color: #006aff;
+    color: #fff;
     fill: currentColor;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
       inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
@@ -100,7 +100,7 @@ const StyledWrapper = styled.div`
     border-radius: 5px;
     padding: 5px;
     transition: all 0.3s;
-    color: #006aff;
+    color: #fff;
     background-color: rgba(255, 255, 255, 0.3);
     position: absolute;
     z-index: 9999;

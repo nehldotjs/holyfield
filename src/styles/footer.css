@@ -1,24 +1,25 @@
 .footer-wrapper {
     width: 100%;
     height: auto;
-    padding-top: 10%;
+    padding-top: 5%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
     background-color: #191919;
     color: white;
-    margin-top: 10%;
-    gap: 30px;
+    gap: 50px;
     border-radius: 50px 50px 0px 0px;
+
+    position: relative;
 }
 
 
 .footer-links-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     width: 80%;
     height: auto;
@@ -36,7 +37,7 @@
 
     justify-content: flex-start;
     align-items: center;
- }
+}
 
 .footerLogoContainer img {
     height: 100%;
@@ -46,38 +47,88 @@
     margin-right: 20px;
 }
 
-.footer-quick-links {
+.footer-links {
     display: flex;
     flex-direction: column;
     height: auto;
     width: auto;
     gap: 10px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links h2 {
+    font-size: 16px;
+}
+
+.footer-links .footerLink {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer-line {
+    display: flex;
+    width: 80%;
+    border-bottom: 1px solid #505050;
+}
 
 .allRightsReserved {
-
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 80%;
     height: 60px;
-    border-top: 1px solid #505050;
     display: flex;
+    font-size: 12px;
+    margin-bottom: 5%;
+}
+
+.footer-otherLinks {
+    display: flex;
+    gap: 20px;
+
+}
+
+.otherLink {
+    z-index: 1;
+    color: white;
+    text-decoration: none;
+    columns: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #006aff;
+}
+
+.bckgrndFont {
+    position: absolute;
+    display: flex;
+    margin-bottom: auto;
+    /* z-index: 1; */
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    bottom: 0px;
+}
+
+.bckgrndFont h1 {
+    height: fit-content;
+    bottom: -20%;
+    position: absolute;
+    color: white;
+
+    letter-spacing: 20px;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 300px;
+
+    background: linear-gradient(to bottom, #969696, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    opacity: .3;
 }

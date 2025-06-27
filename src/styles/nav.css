@@ -4,13 +4,15 @@
     height: auto;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 10px;
     flex-direction: column;
     position: fixed;
+
+    z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
 }
 
 .nav-container {
-    box-shadow: 0px 10px 10px 2px rgba(1, 24, 128, 0.185);
+    box-shadow: 0px 10px 10px 2px rgba(1, 4, 19, 0.185);
     display: flex;
     width: 70%;
     background-color: #191919;
@@ -127,12 +129,30 @@
 .webNavLinks {
     text-decoration: none;
     color: white;
+    position: relative;
+}
+
+.webNavLinks::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+
+    transition: 350ms all ease-in-out;
+}
+
+.webNavLinks:hover:after {
+    width: 100%;
+
 }
 
 .mobileMenu-links-wrapper {
-    display: flex;
+    display: none;
     width: 70%;
-    height: 100px;
+    height: 150px;
     position: absolute;
     bottom: 0px;
     top: 100%;
@@ -145,6 +165,7 @@
 
 .isMobileLink {
     height: 0px;
+    width: 0%;
 }
 
 .mobileMenu-links-container {
@@ -167,4 +188,53 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.burgerButton {
+    display: none;
+}
+
+@media (max-width:900px) {
+    .burgerButton {
+        display: flex;
+    }
+
+    .nav-web-links {
+        display: none;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .nav-container {
+        box-shadow: 0px 10px 10px 2px rgba(1, 24, 128, 0.185);
+        display: flex;
+        width: 90%;
+        background-color: #191919;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .mobileMenu-links-wrapper {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        top: 110%;
+    }
+
+    .mobileMenu-links-container {
+        width: 100%;
+        display: flex;
+        font-size: 20px;
+        margin-right: unset;
+        border-radius: 20px;
+    }
+
+    .webNavLinks::after {
+        width: 0%;
+    }
 }
