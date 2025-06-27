@@ -21,7 +21,9 @@ function App() {
       </Routes>
       <Footer />
       <CorneredButton />
-      <Nav />
+      <div className="app-nav-wrapper">
+        <Nav />
+      </div>
     </div>
   );
 }
