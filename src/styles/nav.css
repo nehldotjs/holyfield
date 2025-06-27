@@ -130,6 +130,7 @@ top: 0px;
     text-decoration: none;
     color: white;
     position: relative;
+    text-transform: uppercase;
 }
 
 .webNavLinks::after {

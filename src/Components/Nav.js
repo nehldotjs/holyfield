@@ -6,38 +6,59 @@ import { Link } from 'react-router-dom'
 
 function Nav() {
   const [isMenu, setIsMenu] = useState(false)
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
-    <div className='nav-wrapper'>
+    <div className="nav-wrapper">
       <div className="nav-container">
         <div className="nav-logo-wrapper">
           <img src={Logo} alt="Holy field logo" />
           <h3>HolyField</h3>
         </div>
         <div className="nav-web-links">
-          <Link className='webNavLinks' to="/">Home</Link>
-          <Link className='webNavLinks' to="/about">About</Link>
-          <Link className='webNavLinks' to="/faqs">Faqs</Link>
-          <a className='webNavLinks' href="#" >Contact</a>
+          <Link onClick={handleClick} className="webNavLinks" to="/">
+            Home
+          </Link>
+          <Link onClick={handleClick} className="webNavLinks" to="/about">
+            About
+          </Link>
+          <Link onClick={handleClick} className="webNavLinks" to="/faqs">
+            Faqs
+          </Link>
+          <a className="webNavLinks" href="#contact">
+            Contact
+          </a>
         </div>
         <div className="nav-mobile-links">
-          <button className='burgerButton' onClick={() => setIsMenu(!isMenu)}>
+          <button className="burgerButton" onClick={() => setIsMenu(!isMenu)}>
             <div className={!isMenu ? "line1" : "line1 line1Anim"}> </div>
-            <div className={!isMenu ? "line2" : "line2 line2Anim"} > </div>
+            <div className={!isMenu ? "line2" : "line2 line2Anim"}> </div>
             <div className={!isMenu ? "line3" : "line3 line3Anim"}> </div>
           </button>
-
-        </div>
-      </div >
-      <div className={isMenu ? "mobileMenu-links-wrapper" : "mobileMenu-links-wrapper isMobileLink"}>
-        <div className="mobileMenu-links-container">
-
-          <Link className='webNavLinks' to="/">Home</Link>
-          <Link className='webNavLinks' to="/about">About</Link>
-          <a className='webNavLinks' href="#" >Contact</a>
         </div>
       </div>
-    </div >
-  )
+      <div
+        className={
+          isMenu
+            ? "mobileMenu-links-wrapper"
+            : "mobileMenu-links-wrapper isMobileLink"
+        }>
+        <div className="mobileMenu-links-container">
+          <Link onClick={handleClick} className="webNavLinks" to="/">
+            Home
+          </Link>
+          <Link onClick={handleClick} className="webNavLinks" to="/about">
+            About
+          </Link>
+          <a className="webNavLinks" href="#contact">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Nav

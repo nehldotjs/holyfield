@@ -1,5 +1,4 @@
 .card-container {
-    background-color: white;
     flex-direction: column;
     gap: 30px;
     padding: 30px;
@@ -19,29 +18,32 @@
     width: 300px;
     padding: 30px;
     gap: 20px;
-
+    background-color: white;
+    z-index: 1;
     transition: 350ms all ease-in-out;
     border-radius: 20px;
     box-shadow: 1px 2px 10px 5px rgba(169, 153, 255, 0.13);
 }
-.c-wrapper:hover{
+
+.c-wrapper:hover {
     box-shadow: 1px 2px 10px 5px #ff582b;
 
 }
+
 .card-header {
     color: #000;
     display: flex;
     height: 20px;
     font-size: 14px;
     font-weight: 700;
-     line-height: 20px;
+    line-height: 20px;
     letter-spacing: 0px;
 }
 
 .card-comment {
     color: #4A4A4A;
     font-size: 14px;
- }
+}
 
 .card-image-wrapper {
     display: flex;
@@ -78,4 +80,4 @@
     height: 19px;
 
     color: #4A4A4A;
- }
+}

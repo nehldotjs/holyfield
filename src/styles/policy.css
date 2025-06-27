@@ -1,0 +1,78 @@
+.policy-wrapper {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+.policy-wrapper h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #111;
+    text-align: center;
+}
+
+.policy-wrapper h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    border-left: 4px solid orangered;
+    padding-left: 10px;
+}
+
+.policy-wrapper p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.policy-wrapper ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.policy-wrapper li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.policy-wrapper strong {
+    color: #222;
+}
+
+.policy-wrapper a {
+    color: orangered;
+    text-decoration: none;
+}
+
+.policy-wrapper a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .policy-wrapper {
+        padding: 25px 15px;
+    }
+
+    .policy-wrapper h1 {
+        font-size: 2rem;
+    }
+
+    .policy-wrapper h2 {
+        font-size: 1.25rem;
+    }
+
+    .policy-wrapper p,
+    .policy-wrapper li {
+        font-size: 0.95rem;
+    }
+}

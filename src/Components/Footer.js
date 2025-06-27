@@ -6,46 +6,57 @@ import logo from "../Assets/images/3bf53f3da3d8c792b88e415ffe37d611fd47e0b296bcb
 import SocialButton from "../PropAssets/SocialButton";
 
 function Footer() {
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="footer-wrapper">
+    <div className="footer-wrapper" id="contact">
       <div className="footer-links-wrapper">
         <div className="footerLogoWrapper">
-          <div className="footerLogoContainer">
+          <Link onClick={handleClick} className="footerLogoContainer">
             <img src={logo} alt="holy field logo" />
             <h2>Holy Field</h2>
-          </div>
+          </Link>
           <SocialButton />
         </div>
 
         <div className="footer-links">
           <h2>Quick Links</h2>
-          <Link to="/" className="footerLink">
+          <Link onClick={handleClick} to="/" className="footerLink">
             Home
           </Link>
-          <Link to="/about" className="footerLink">
+          <Link onClick={handleClick} to="/about" className="footerLink">
             About
           </Link>
-          <Link to="/service" className="footerLink">
+          {/* <Link onClick={handleClick} to="/service" className="footerLink">
             Service
-          </Link>
+          </Link> */}
         </div>
 
         <div className="footer-links">
-          <h2>link Header</h2>
-          <Link className="footerLink">LINKS HERE</Link>
-          <Link className="footerLink">LINKS HERE</Link>
-          <Link className="footerLink">LINKS HERE</Link>
-          <Link className="footerLink">LINKS HERE</Link>
+          <h2>Contact Us</h2>
+          <Link onClick={handleClick} className="footerLink">
+            {" "}
+            456 Example Ave, Melbourne VIC 3000 AU
+          </Link>
+          <Link onClick={handleClick} className="footerLink">
+            info@holyfield.com
+          </Link>
+          <Link onClick={handleClick} className="footerLink">
+            Call Us: +234 902 456 8995
+          </Link>
         </div>
       </div>
+
       <div className="footer-line"></div>
       <div className="allRightsReserved">
-        <p>All right reserved &copy; 2025 Holly-Field Inc</p>
+        <p>All right reserved &copy; 2025 Holy-Field Inc</p>
         <div className="footer-otherLinks">
-          <Link to="/policy" className="otherLink">
+          <Link onClick={handleClick} to="/policy" className="otherLink">
             Privacy Policy
           </Link>
-          <Link to="/terms" className="otherLink">
+          <Link onClick={handleClick} to="/terms" className="otherLink">
             Terms & Condition
           </Link>
         </div>
