@@ -36,19 +36,9 @@ function Footer() {
 
         <div className="footer-links">
           <h2>Our Services</h2>
-          <p className="footerLink">
-            Financial Support{" "}
-          </p>
-          <p className="footerLink">
-            Travel Processing Services{" "}
-          </p>
-          <p className="footerLink">
-            Loan Services{" "}
-          </p>
-          <p
-           className="footerLink">
-            Bank Reference Assistance (POF – Personal & Corporate Accounts){" "}
-          </p>
+          <p className="footerLink">Travel Processing Services </p>{" "}
+          <p className="footerLink">Financial Support For Visas</p>
+          <p className="footerLink">Loan Services</p>
         </div>
 
         <div className="footer-links">

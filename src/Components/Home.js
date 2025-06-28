@@ -74,13 +74,13 @@ function Home() {
         </div>
 
         <h1 style={getStyle(3)}>
-          Unlock New Opportunities with <br /> Holy Field — Your Gateway to
+          Unlock New Opportunities with <br /> HolyField — Your Gateway to
           Global Possibilities
         </h1>
 
         <div className="hero-paragraph-container">
           <p style={getStyle(4)}>
-            Holy Field, we make your dreams of studying, working, traveling, or
+            HolyField, we make your dreams of studying, working, traveling, or
             expanding your business abroad a reality. Start your journey today
             with confidence, knowing you have a dedicated partner that puts your
             goals first.
@@ -105,7 +105,7 @@ function Home() {
           </p>
           <div className="types-wrapper">
             <div className="type" data-aos="fade-up">
-              <h2>Types of Finance</h2>
+              <h2>Types of Visas</h2>
               <p>
                 We provide financial support for school, visiting, work, and
                 immigration travel to help meet your unique needs.
@@ -122,8 +122,8 @@ function Home() {
         </div>
         <div className="h-section2-img-wrapper" data-aos="fade-up">
           <div className="imgBackgroundOverlay" data-aos="fade-right"></div>
-          <img src={friendsImage} alt="" data-aos="fade-up" />{" "}
-        </div>{" "}
+          <img src={friendsImage} alt="" data-aos="fade-up" />
+        </div>
       </div>
 
       <div className="home-section3">
@@ -149,11 +149,11 @@ function Home() {
               <img src={finance} alt="" />
             </div>
             <h3 className="hs3-header">
-              Expert Assistance in Proof of Funds and Financial Documentation{" "}
+              Expert Assistance in Proof of Funds and Financial Documentation
             </h3>
             <p>
               Our team ensures you have the necessary financial documents for a
-              successful application.{" "}
+              successful application.
             </p>
           </div>
 
@@ -162,10 +162,10 @@ function Home() {
               <img src={assist} alt="" />
             </div>
             <h3 className="hs3-header">
-              Comprehensive Services for Loan Applications and Financial Support{" "}
+              Comprehensive Services for Loan Applications and Financial Support
             </h3>
             <p>
-              We offer a range of loan options to meet your financial needs.{" "}
+              We offer a range of loan options to meet your financial needs.
             </p>
           </div>
         </div>
@@ -177,7 +177,7 @@ function Home() {
           <h2>Explore Our Diverse Loan Services Today</h2>
           <p className="text">
             We offer a wide range of loan services tailored to meet your
-            financial needs. Whether you're looking for personal or business
+            financial needs. Whether you're looking for personal or experiences
             financing, we have options that suit you.
           </p>
         </div>
