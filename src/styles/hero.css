@@ -5,10 +5,10 @@
     flex-direction: column;
     margin-bottom: 50px;
     gap: 50px;
-
 }
 
 /* ========== Hero Wrapper ========== */
+
 .hero-wrapper {
     position: relative;
     height: auto;
@@ -21,8 +21,6 @@
     margin: auto;
     text-align: center;
     overflow: hidden;
-
-
 }
 
 .hero-wrapper h1 {
@@ -64,18 +62,17 @@
 
 .blobWrapper {
     /* background-color: red; */
-    position: absolute;
-    top: 0%;
-    right: 20px;
-    transform: translateY(-50%);
-    width: auto;
-    height: auto;
-    z-index: -1;
 
+    position: absolute;
+    transform: translateY(-50%);
+    height: auto;
+    right: 20px;
+    width: auto;
+    z-index: -1;
+    top: 0%;
     animation: float 2s ease-in-out infinite;
 }
 
-/* HTML: <div class="grid-lines"></div> */
 .blob {
     width: 300px;
     height: 300px;
@@ -228,7 +225,6 @@
     border-radius: 50%;
     position: absolute;
     bottom: 0px;
-
 }
 
 .h-section2-img-wrapper img {
@@ -237,8 +233,6 @@
     display: flex;
     object-fit: contain;
     z-index: 1;
-
-
     border-radius: 0px 0px 50% 50%;
 }
 
@@ -282,6 +276,8 @@
     height: auto;
     gap: 30px;
     padding: 0px 10%;
+
+
 }
 
 .section-3-container {
@@ -306,10 +302,10 @@
 }
 
 .section3-imageWrapper img {
-    height: 100%;
     width: 100%;
-    object-fit: cover;
+    height: 100%;
     margin: auto;
+    object-fit: cover;
 }
 
 .hs3-header {
@@ -319,7 +315,6 @@
     font-weight: 100;
     font-size: 18px;
     color: #fff;
-
 }
 
 .section-3-container p {
@@ -493,6 +488,7 @@
     object-fit: contain;
     mix-blend-mode: multiply;
 
+
 }
 
 .home-testimonial-Wrapper {
@@ -638,7 +634,8 @@
 @media (max-width: 900px) {
     .hero-wrapper {
         width: 90%;
-        padding-top: 40%;
+        padding-top: 30%;
+        gap: 0px;
     }
 
     .hero-wrapper h1 {
@@ -654,5 +651,207 @@
         gap: 20px;
         width: 100%;
         padding: 30px;
+    }
+
+    /* ____________________________ */
+
+
+    .home-section2 {
+        flex-direction: column-reverse;
+        width: 100%;
+        display: flex;
+        padding: 0% 5%;
+        margin: auto;
+
+        color: #191919;
+    }
+
+    .h-section2-text-Wrapper .types-wrapper {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .h-section2-img-wrapper {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: unset;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .imgBackgroundOverlay {
+        height: 300px;
+        width: 300px;
+        display: flex;
+        background-color: #ff582b;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 2px;
+    }
+
+    .h-section2-img-wrapper img {
+        height: 400px;
+        width: 100%;
+        display: flex;
+        object-fit: contain;
+        z-index: 1;
+        border-radius: 0px 0px 50% 50%;
+    }
+
+    .home-section3 {
+        display: flex;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        background-color: red;
+        gap: 20px;
+        padding: 10% 0px;
+        background-color: #22241a;
+    }
+
+    /* _________________________________ */
+
+    .home-section3 {
+        display: flex;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: auto;
+        padding: 50px 40px;
+    }
+
+    .section3-header {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .section3-context-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: auto;
+        width: 100%;
+        gap: 30px;
+        margin: auto;
+        padding: unset;
+    }
+
+    .section-3-container {
+        gap: 20px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ________________________________________ */
+
+
+    .home-section4 {
+        width: 90%;
+    }
+
+    .hs4-container1 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .hs4-container2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+
+        gap: 20px;
+        margin: 50px 0px;
+    }
+
+    /* _____________________________ */
+
+    .home-section5 {
+        padding: 0px 10%;
+        display: flex;
+        gap: unset;
+        flex-direction: column;
+    }
+
+    .home-section6-testimonial-wrapper {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        z-index: -1;
+        /* background-color: yellowgreen; */
+    }
+
+    /* ___________________ */
+
+    .contact-id {
+        margin-bottom: 2%;
+        display: none;
+    }
+
+    /* ________________________ */
+
+    .home-section7 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 0px 10%;
+    }
+
+    .h7-bottom-section {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .h7-b-subSection-1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .h7-contact-wrapper {
+        display: flex;
+        text-decoration: none;
+        color: #2b2b2b;
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .hs7-imageWrapper {
+        display: flex;
+        width: 100%;
+        height: 150px;
+        border-radius: 10px;
+        overflow: hidden;
     }
 }

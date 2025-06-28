@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/hero.css";
 import DiscoverButton from "../PropAssets/DiscoverBtn";
 
@@ -13,33 +13,73 @@ import { HiMiniBanknotes } from "react-icons/hi2";
 import { IoMailOutline, IoStatsChartSharp } from "react-icons/io5";
 import { TbMathSymbols, TbTruckDelivery } from "react-icons/tb";
 import { FaRoute } from "react-icons/fa";
-import Carousel from "../PropAssets/customs/Carousel";
-import TestimonialCards from "../PropAssets/customs/TestimonialCards";
 import { BsTelephone } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import Testimonial from "../PropAssets/Testimonial";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function Home() {
+  const [activeIndices, setActiveIndices] = useState([]);
+
+  // Trigger sequential style on component mount
+
+  useEffect(() => {
+    const delays = [300, 200, 500, 700, 1000, 1200, 1600, 1800]; // delay in ms for each div
+    setActiveIndices([]); // Reset before triggering
+
+    delays.forEach((delay, index) => {
+      setTimeout(() => {
+        setActiveIndices((prev) => [...prev, index]);
+      }, delay);
+    });
+  }, []); // The empty dependency array ensures this runs once when the component mounts
+  const getStyle = (index) => {
+    const active = activeIndices.includes(index);
+    const opacity = ["1", "1", "1", "1", "1", "1", "1", "1"];
+
+    return {
+      transition: "all 1s ease-in-out",
+      opacity: active ? opacity[index] : "0"
+    };
+  };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true, // whether animation should happen only once
+
+      offset: 120,
+      delay: 0,
+      easing: "ease",
+      mirror: false,
+      anchorPlacement: "top-bottom"
+    });
+  }, []);
+
   return (
     <div className="home-wrapper">
       <div className="hero-wrapper">
-        <div className="shapes-wrapper">
+        <div
+          style={getStyle(1)}
+          className="shapes-wrapper style={getStyle(4)} ">
           <div className="wavy-float">
             <div className="wavy-circle"></div>
           </div>
         </div>
 
-        <div className="blobWrapper">
+        <div className="blobWrapper" style={getStyle(2)}>
           <div className="blob"></div>
         </div>
 
-        <h1>
+        <h1 style={getStyle(3)}>
           Unlock New Opportunities with Holy Field — Your Gateway to Global
           Possibilities
         </h1>
 
         <div className="hero-paragraph-container">
-          <p>
+          <p style={getStyle(4)}>
             Holy Field, we make your dreams of studying, working, traveling, or
             expanding your business abroad a reality. Start your journey today
             with confidence, knowing you have a dedicated partner that puts your
@@ -47,28 +87,28 @@ function Home() {
           </p>
         </div>
 
-        <DiscoverButton />
+        <DiscoverButton style={getStyle(5)} />
       </div>
 
       <div className="home-section2">
         <div className="h-section2-text-Wrapper">
-          <h1>
+          <h1 data-aos="fade-up">
             Explore Our Comprehensive Visa Processing Services Tailored for Your
             Needs
           </h1>
-          <p>
+          <p data-aos="fade-up">
             Navigating the world of visas can be complex. Our dedicated team
             simplifies the process, ensuring you find the right visa solution.
           </p>
           <div className="types-wrapper">
-            <div className="type">
+            <div className="type" data-aos="fade-up">
               <h2>Types of Visa</h2>
               <p>
                 We offer school, visiting, work, and immigration visas to meet
                 your needs.
               </p>
             </div>
-            <div className="type">
+            <div className="type" data-aos="fade-up">
               <h2>Get Started</h2>
               <p>
                 Contact us today to learn more about our visa processing
@@ -77,18 +117,18 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="h-section2-img-wrapper">
-          <div className="imgBackgroundOverlay"></div>
-          <img src={friendsImage} alt="" />{" "}
+        <div className="h-section2-img-wrapper" data-aos="fade-up">
+          <div className="imgBackgroundOverlay" data-aos="fade-right"></div>
+          <img src={friendsImage} alt="" data-aos="fade-up" />{" "}
         </div>{" "}
       </div>
 
       <div className="home-section3">
-        <h1 className="section3-header">
+        <h1 data-aos="fade-up" className="section3-header">
           Comprehensive Financial Support Services for Your Visa Needs
         </h1>
         <div className="section3-context-wrapper">
-          <div className="section-3-container">
+          <div data-aos="fade-up" className="section-3-container">
             <div className="section3-imageWrapper">
               <img src={airport} alt="" />
             </div>
@@ -101,7 +141,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="section-3-container">
+          <div data-aos="fade-up" className="section-3-container">
             <div className="section3-imageWrapper">
               <img src={finance} alt="" />
             </div>
@@ -114,7 +154,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="section-3-container">
+          <div data-aos="fade-up" className="section-3-container">
             <div className="section3-imageWrapper">
               <img src={assist} alt="" />
             </div>
@@ -129,7 +169,7 @@ function Home() {
       </div>
 
       <div className="home-section4">
-        <div className="hs4-container1">
+        <div className="hs4-container1" data-aos="fade-up">
           <p className="p-heading">Loan</p>
           <h2>Explore Our Diverse Loan Services Today</h2>
           <p className="text">
@@ -140,7 +180,7 @@ function Home() {
         </div>
 
         <div className="hs4-container2">
-          <div className="hs4-Context-wrapper">
+          <div data-aos="fade-up" className="hs4-Context-wrapper">
             <div className="iconWrapper">
               <HiMiniBanknotes className="hs4-icon" />
             </div>
@@ -152,7 +192,7 @@ function Home() {
               achieve your financial goals.
             </p>
           </div>
-          <div className="hs4-Context-wrapper">
+          <div data-aos="fade-up" className="hs4-Context-wrapper">
             <div className="iconWrapper">
               <IoStatsChartSharp className="hs4-icon" />
             </div>
@@ -164,7 +204,7 @@ function Home() {
               success potential in a competitive market.
             </p>
           </div>
-          <div className="hs4-Context-wrapper">
+          <div data-aos="fade-up" className="hs4-Context-wrapper">
             <div className="iconWrapper">
               <TbTruckDelivery className="hs4-icon" />
             </div>
@@ -179,9 +219,13 @@ function Home() {
 
       <div className="home-section5">
         <div className="hs5-section1">
-          <p className="hs5-p-header">Empower</p>
-          <h1 className="hs5-header">Your Trusted Partner in Finance Growth</h1>
-          <p className="hs5-text">
+          <p data-aos="fade-up" className="hs5-p-header">
+            Empower
+          </p>
+          <h1 data-aos="fade-up" className="hs5-header">
+            Your Trusted Partner in Finance Growth
+          </h1>
+          <p data-aos="fade-up" className="hs5-text">
             Choosing Holy-Field means unlocking an expansive world of
             opportunities that cater specifically to your aspirations. Our deep
             expertise in visa processing, combined with comprehensive financial
@@ -192,7 +236,7 @@ function Home() {
           </p>
 
           <div className="hs5-sub-wrapper">
-            <div className="hs5-sub-container">
+            <div data-aos="fade-up" className="hs5-sub-container">
               <div className="hs5-icon-container">
                 <FaRoute className="sub-icon" />
               </div>
@@ -202,7 +246,7 @@ function Home() {
                 knowledgeable team by your side.
               </p>
             </div>
-            <div className="hs5-sub-container">
+            <div data-aos="fade-up" className="hs5-sub-container">
               <div className="hs5-icon-container">
                 <TbMathSymbols className="sub-icon" />
               </div>
@@ -214,7 +258,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="hs5-section2">
+        <div data-aos="fade-up" className="hs5-section2">
           <div className="hs5-imageWrapper">
             <img src={plan} alt="" />
           </div>
@@ -238,21 +282,21 @@ function Home() {
         <div className="h7-bottom-section">
           <div className="h7-b-subSection-1">
             <div className="h7-contact-wrapper">
-              <div className="h7-subContactContainer">
+              <div data-aos="fade-up" className="h7-subContactContainer">
                 <IoMailOutline />
                 <h3>Mail</h3>
                 <a href="mailto:info@holyfield.com" className="mailLink">
                   info@holyfield.com
                 </a>
               </div>
-              <div className="h7-subContactContainer">
+              <div data-aos="fade-up" className="h7-subContactContainer">
                 <BsTelephone />
                 <h3>phone</h3>
                 <a href="#" className="foneLink">
                   +234 012 345 6987{" "}
                 </a>
               </div>
-              <div className="h7-subContactContainer">
+              <div data-aos="fade-up" className="h7-subContactContainer">
                 <MdLocationOn />
                 <h3>office</h3>
                 <p className="addressLink">
@@ -261,7 +305,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="h7-subSection-2">
+          <div data-aos="fade-up" className="h7-subSection-2">
             <div className="hs7-imageWrapper">
               <img src={receptionist} alt="" />
             </div>

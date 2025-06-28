@@ -1,23 +1,45 @@
-import React, { useState } from 'react'
-import "../styles/nav.css"
+import React, { useEffect, useState } from "react";
+import "../styles/nav.css";
 
-import Logo from "../Assets/images/3bf53f3da3d8c792b88e415ffe37d611fd47e0b296bcb588b656262e105731f5.svg"
-import { Link } from 'react-router-dom'
+import Logo from "../Assets/images/3bf53f3da3d8c792b88e415ffe37d611fd47e0b296bcb588b656262e105731f5.svg";
+import { Link } from "react-router-dom";
 
 function Nav() {
-  const [isMenu, setIsMenu] = useState(false)
+  const [isMenu, setIsMenu] = useState(false);
+  const [activeIndices, setActiveIndices] = useState([]);
+
+  // Trigger sequential style on component mount
+  useEffect(() => {
+    const delays = [100, 200, 500, 700, 1000, 1200, 1600, 1800]; // delay in ms for each div
+    setActiveIndices([]); // Reset before triggering
+
+    delays.forEach((delay, index) => {
+      setTimeout(() => {
+        setActiveIndices((prev) => [...prev, index]);
+      }, delay);
+    });
+  }, []); // The empty dependency array ensures this runs once when the component mounts
+  const getStyle = (index) => {
+    const active = activeIndices.includes(index);
+    const opacity = ["1", "1", "1", "1", "1", "1", "1", "1"];
+
+    return {
+      transition: "all 1s ease-in-out",
+      opacity: active ? opacity[index] : "0"
+    };
+  };
 
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className="nav-wrapper">
+    <div className="nav-wrapper" style={getStyle(1)}>
       <div className="nav-container">
         <div className="nav-logo-wrapper">
-          <img src={Logo} alt="Holy field logo" />
-          <h3>HolyField</h3>
+          <img style={getStyle(2)} src={Logo} alt="Holy field logo" />
+          <h3 style={getStyle(3)}>HolyField</h3>
         </div>
-        <div className="nav-web-links">
+        <div style={getStyle(4)} className="nav-web-links">
           <Link onClick={handleClick} className="webNavLinks" to="/">
             Home
           </Link>
@@ -61,4 +83,4 @@ function Nav() {
   );
 }
 
-export default Nav
+export default Nav;

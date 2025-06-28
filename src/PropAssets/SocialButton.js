@@ -109,6 +109,16 @@ const StyledWrapper = styled.div`
     cursor: pointer;
   }
 
+  @media (max-width: 900px) {
+    .card {
+      flex-direction: row;
+     }
+
+    .card ul {
+      flex-wrap: unset;
+      flex-direction: row;
+     }
+  }
   .svg {
     transition: all 0.3s;
     /* if you find some problems change w - h : 30px*/
