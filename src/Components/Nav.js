@@ -48,9 +48,7 @@ function Nav() {
           <Link onClick={handleClick} className="webNavLinks" to="/about">
             About
           </Link>
-          <Link onClick={handleClick} className="webNavLinks" to="/faqs">
-            Faqs
-          </Link>
+
           <a className="webNavLinks" href="#contact">
             Contact
           </a>
@@ -70,10 +68,16 @@ function Nav() {
             : "mobileMenu-links-wrapper isMobileLink"
         }>
         <div className="mobileMenu-links-container">
-          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/">
+          <Link
+            onClick={handleClick}
+            className="webNavLinks webNavLinks-mobile"
+            to="/">
             Home
           </Link>
-          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/about">
+          <Link
+            onClick={handleClick}
+            className="webNavLinks webNavLinks-mobile"
+            to="/about">
             About
           </Link>
           <a className="webNavLinks webNavLinks-mobile" href="#contact">

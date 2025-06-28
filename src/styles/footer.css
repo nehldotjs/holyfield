@@ -46,8 +46,9 @@
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 2px;
-
-    background: linear-gradient(to bottom right, #006aff, #b5afff);
+    background: linear-gradient(to bottom right, #5c9efa,
+            #44c4ff75, #006aff5b);
+    /* Choose your gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -75,6 +76,12 @@
 
 .footer-links h2 {
     font-size: 16px;
+}
+
+.ql{
+    display: flex;
+    border: 1px solid #ff5425;
+    padding:10px 20px;
 }
 
 .footer-links .footerLink {

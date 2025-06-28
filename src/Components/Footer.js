@@ -23,10 +23,10 @@ function Footer() {
 
         <div className="footer-links">
           <h2>Quick Links</h2>
-          <Link onClick={handleClick} to="/" className="footerLink">
+          <Link onClick={handleClick} to="/" className="ql footerLink">
             Home
           </Link>
-          <Link onClick={handleClick} to="/about" className="footerLink">
+          <Link onClick={handleClick} to="/about" className="ql footerLink">
             About
           </Link>
           {/* <Link onClick={handleClick} to="/service" className="footerLink">

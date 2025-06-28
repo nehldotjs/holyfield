@@ -6,7 +6,8 @@
     align-items: center;
     margin-top: 10px;
     flex-direction: column;
-    position: relative;margin: auto;
+    position: relative;
+    margin: auto;
 }
 
 .nav-container {
@@ -22,12 +23,25 @@
 }
 
 .nav-logo-wrapper {
+    gap: 20px;
     width: 100%;
     height: 50px;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: flex-start;
+}
+
+.nav-logo-wrapper h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+
+    font-weight: 900;
+    background: linear-gradient(to bottom right, #5c9efa,
+            #44c4ff75, #006aff5b);
+    /* Choose your gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-logo-wrapper img {
@@ -37,21 +51,16 @@
 
     object-fit: contain;
 }
-
-.nav-logo-wrapper h3 {
-    color: #fff;
-    font-weight: bold;
-}
-
+ 
 .nav-mobile-links {
     display: flex;
 }
 
 .nav-web-links {
     display: flex;
-    width: 100%;
+    width: 70%;
     height: 50px;
-    align-items: center;
+     align-items: center;
     justify-content: space-evenly;
 }
 
@@ -177,10 +186,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
- gap: 20px;
+    gap: 20px;
 
-      border-radius: 0px 0px 20px 20px;
- }
+    border-radius: 0px 0px 20px 20px;
+}
 
 .mobileMenu-links-container {
     display: flex;
@@ -192,11 +201,28 @@
     display: none;
 }
 
-.webNavLinks-mobile{
+.webNavLinks-mobile {
     font-size: 25px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
- 
-@media (max-width:900px){
+
+@media (max-width:900px) {
+    .nav-logo-wrapper {
+        gap: 20px;
+        width: 50%;
+        height: 50px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
     .burgerButton {
         display: flex;
     }
@@ -234,9 +260,11 @@
         font-size: 20px;
         margin-right: unset;
         border-radius: 20px;
+
     }
 
     .webNavLinks::after {
         width: 0%;
+        display: none;
     }
 }

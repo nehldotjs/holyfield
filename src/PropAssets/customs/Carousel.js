@@ -23,7 +23,7 @@ const Carousel = ({ data, render, sliderRef }) => {
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1, centerPadding: "20px" }
+        settings: { slidesToShow: 1, centerPadding: "50px" }
       }
     ]
   };

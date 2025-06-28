@@ -848,7 +848,7 @@
 
     .contact-id {
         margin-bottom: 2%;
-        display: none;
+        display: flex;
     }
 
     /* ________________________ */
