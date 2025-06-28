@@ -87,9 +87,9 @@ function Home() {
           </p>
         </div>
 
-        <Link to="/" style={({ textDecoration: "none" }, getStyle(5))}>
+        <div className="discoverLink" style={getStyle(5)}>
           <DiscoverButton />
-        </Link>
+        </div>
       </div>
 
       <div className="home-section2">

@@ -54,7 +54,9 @@
 
     text-transform: capitalize;
 }
-
+.discoverLink{
+    text-decoration: none;
+}
 .hero-button {
     font-size: 15px;
     padding: 30px;
