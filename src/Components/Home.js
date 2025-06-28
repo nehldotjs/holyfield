@@ -153,7 +153,7 @@ function Home() {
             </h3>
             <p>
               Our team ensures you have the necessary financial documents for a
-              successful visa application.{" "}
+              successful application.{" "}
             </p>
           </div>
 
