@@ -3,38 +3,37 @@ import "../styles/hero.css";
 import DiscoverButton from "../PropAssets/DiscoverBtn";
 
 import friendsImage from "../Assets/images/model.png";
-import airport from "../Assets/images/airport-1822133_1920.jpg";
+import receptionist from "../Assets/images/receptionists-5975962_1920.jpg";
 import finance from "../Assets/images/laptop-3196481_1920.jpg";
+import airport from "../Assets/images/airport-1822133_1920.jpg";
 import assist from "../Assets/images/credit-cards-1583534_1280.jpg";
 import plan from "../Assets/images/finance.jpg";
-import receptionist from "../Assets/images/receptionists-5975962_1920.jpg";
 
 import { HiMiniBanknotes } from "react-icons/hi2";
-import { IoMailOutline, IoStatsChartSharp } from "react-icons/io5";
 import { TbMathSymbols, TbTruckDelivery } from "react-icons/tb";
-import { FaRoute } from "react-icons/fa";
-import { BsTelephone } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
+import { IoMdMail } from "react-icons/io";
+
 import Testimonial from "../PropAssets/Testimonial";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { IoStatsChartSharp } from "react-icons/io5";
+import { FaPhoneAlt, FaRoute } from "react-icons/fa";
 
 function Home() {
   const [activeIndices, setActiveIndices] = useState([]);
 
-  // Trigger sequential style on component mount
-
   useEffect(() => {
-    const delays = [300, 200, 500, 700, 1000, 1200, 1600, 1800]; // delay in ms for each div
-    setActiveIndices([]); // Reset before triggering
-
+    const delays = [300, 200, 500, 700, 1000, 1200, 1600, 1800];
+    setActiveIndices([]);
     delays.forEach((delay, index) => {
       setTimeout(() => {
         setActiveIndices((prev) => [...prev, index]);
       }, delay);
     });
-  }, []); // The empty dependency array ensures this runs once when the component mounts
+  }, []);
+
   const getStyle = (index) => {
     const active = activeIndices.includes(index);
     const opacity = ["1", "1", "1", "1", "1", "1", "1", "1"];
@@ -47,8 +46,8 @@ function Home() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animation duration in ms
-      once: true, // whether animation should happen only once
+      duration: 1000,
+      once: true,
 
       offset: 120,
       delay: 0,
@@ -74,8 +73,8 @@ function Home() {
         </div>
 
         <h1 style={getStyle(3)}>
-          Unlock New Opportunities with <br /> Holy Field — Your Gateway to Global
-          Possibilities
+          Unlock New Opportunities with <br /> Holy Field — Your Gateway to
+          Global Possibilities
         </h1>
 
         <div className="hero-paragraph-container">
@@ -283,21 +282,21 @@ function Home() {
           <div className="h7-b-subSection-1">
             <div className="h7-contact-wrapper">
               <div data-aos="fade-up" className="h7-subContactContainer">
-                <IoMailOutline />
+                <IoMdMail color="#006aff" />
                 <h3>Mail</h3>
                 <a href="mailto:info@holyfield.com" className="mailLink">
                   info@holyfield.com
                 </a>
               </div>
               <div data-aos="fade-up" className="h7-subContactContainer">
-                <BsTelephone />
+                <FaPhoneAlt color="#a8d800" />
                 <h3>phone</h3>
-                <a href="#" className="foneLink">
+                <a href="#contact" className="phoneLink">
                   +234 012 345 6987{" "}
                 </a>
               </div>
               <div data-aos="fade-up" className="h7-subContactContainer">
-                <MdLocationOn />
+                <MdLocationOn color="#ff582b" />
                 <h3>office</h3>
                 <p className="addressLink">
                   456 Example Ave, Melbourne VIC 3000 AU

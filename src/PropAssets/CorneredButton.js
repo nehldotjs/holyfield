@@ -48,11 +48,14 @@ function CorneredButton() {
         }>
         <div className="cta-context-backgroundOverlay"></div>
         <div className="cta-container">
-          <button className="whatsapp-btn-wrapper">
-            {" "}
+          <a
+            href="https://wa.me/2348123323899?text=Hello%2C%20I'm%20interested%20in%20your%20services!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whatsapp-btn-wrapper">
             <TbBrandWhatsappFilled className="whatsappIcon" />
-            <h2> Connect with us on whatsapp</h2>
-          </button>{" "}
+            <h2>Chat with Us on WhatsApp</h2>
+          </a>
           <div className="faq-wrapper">
             {faqs.map((faq, index) => (
               <div key={index} className="faq-item">

@@ -31,6 +31,7 @@ function Nav() {
   };
 
   const handleClick = () => {
+    setIsMenu(!isMenu);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
