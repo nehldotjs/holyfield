@@ -81,7 +81,7 @@ function Home() {
         <div className="hero-paragraph-container">
           <p style={getStyle(4)}>
             HolyField, we make your dreams of studying, working, traveling, or
-            expanding your business abroad a reality. Start your journey today
+            expanding your experiences abroad a reality. Start your journey today
             with confidence, knowing you have a dedicated partner that puts your
             goals first.
           </p>

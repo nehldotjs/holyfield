@@ -49,7 +49,7 @@ function CorneredButton() {
         <div className="cta-context-backgroundOverlay"></div>
         <div className="cta-container">
           <a
-            href="https://wa.me/2348123323899?text=Hello%2C%20I'm%20interested%20in%20your%20services!"
+            href="https://wa.me/2348123323899?text=Hi%2C%20my%20name%20is%20[Your%20Name].%20I%27m%20interested%20in%20learning%20more%20about%20your%20services%20and%20how%20you%20can%20assist%20me."
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-btn-wrapper">
