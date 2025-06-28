@@ -29,7 +29,7 @@ function Nav() {
       opacity: active ? opacity[index] : "0"
     };
   };
-
+ 
   const handleClick = () => {
     setIsMenu(!isMenu);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -40,7 +40,10 @@ function Nav() {
       <div className="nav-container">
         <div className="nav-logo-wrapper">
           <img style={getStyle(2)} src={Logo} alt="Holy field logo" />
-          <Link className="logoLink" to="/" onClick={handleClick}>
+          <Link
+            className="logoLink"
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             <h3 style={getStyle(3)}>HolyField</h3>
           </Link>
         </div>
