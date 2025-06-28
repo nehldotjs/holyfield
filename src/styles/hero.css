@@ -517,6 +517,8 @@
     align-items: center;
     padding: 0px;
     z-index: -1;
+
+    margin: 100px 0px;
 }
 
 .contact-id {
