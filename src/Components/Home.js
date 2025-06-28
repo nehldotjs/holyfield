@@ -292,7 +292,7 @@ function Home() {
                 <FaPhoneAlt color="#a8d800" />
                 <h3>phone</h3>
                 <a href="#contact" className="phoneLink">
-                  +234 012 345 6987{" "}
+                  +234 812 332 3899
                 </a>
               </div>
               <div data-aos="fade-up" className="h7-subContactContainer">

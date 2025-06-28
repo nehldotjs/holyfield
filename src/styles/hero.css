@@ -538,7 +538,8 @@
 }
 
 .hs7-pTag-header {
-    color: #a8d800;
+    /* color: #a8d800; */
+    color: #2b2b2b;
 }
 
 .hs7-top-section h1 {

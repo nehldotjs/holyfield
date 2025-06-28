@@ -40,7 +40,9 @@ function Nav() {
       <div className="nav-container">
         <div className="nav-logo-wrapper">
           <img style={getStyle(2)} src={Logo} alt="Holy field logo" />
-          <h3 style={getStyle(3)}>HolyField</h3>
+          <Link className="logoLink" to="/" onClick={handleClick}>
+            <h3 style={getStyle(3)}>HolyField</h3>
+          </Link>
         </div>
         <div style={getStyle(4)} className="nav-web-links">
           <Link onClick={handleClick} className="webNavLinks" to="/">

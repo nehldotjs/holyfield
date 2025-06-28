@@ -8,9 +8,9 @@ function TestimonialCards({ id, img, name, header, comment }) {
         <h3 className="card-header">{header}</h3>
         <p className="card-comment">{comment}</p>
         <div className="card-image-wrapper">
-          <div className="card-image-container">
+          {/* <div className="card-image-container">
             <img src={img} alt="" className="cardimage" />
-          </div>
+          </div> */}
           <p className="card-username">{name}</p>
         </div>
       </div>

@@ -30,12 +30,15 @@
     position: relative;
     align-items: center;
     justify-content: flex-start;
-}
 
+     text-decoration: none;
+}
+.nav-logo-wrapper .logoLink{
+    text-decoration: none;
+}
 .nav-logo-wrapper h3 {
     font-size: 20px;
     text-transform: uppercase;
-
     font-weight: 900;
     background: linear-gradient(to bottom right, #5c9efa,
             #44c4ff75, #006aff5b);

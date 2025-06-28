@@ -80,7 +80,7 @@
 
 .ql{
     display: flex;
-    border: 1px solid #ff5425;
+    border: 1px dotted #ff5425;
     padding:10px 20px;
 }
 

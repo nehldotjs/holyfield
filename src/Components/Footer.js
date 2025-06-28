@@ -44,7 +44,7 @@ function Footer() {
             info@holyfield.com
           </Link>
           <Link onClick={handleClick} className="footerLink">
-            Call Us: +234 902 456 8995
+            Call Us: +234 812 332 3899
           </Link>
         </div>
       </div>
