@@ -63,8 +63,9 @@ function Footer() {
       </div>
 
       <div className="bckgrndFont">
-        <h1 className="web-f-text">Holy Field</h1>
-        <h1 className="web-m-text">Holy Field</h1>
+        <h1>
+          Holy <br /> Field
+        </h1>
       </div>
     </div>
   );

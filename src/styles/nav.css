@@ -152,7 +152,7 @@
 .mobileMenu-links-wrapper {
     display: none;
     width: 70%;
-    height: 150px;
+    height: 250px;
     position: absolute;
     bottom: 0px;
     top: 100%;
@@ -177,12 +177,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 10%;
+ gap: 20px;
 
-    font-size: 20px;
-
-    border-radius: 0px 0px 20px 20px;
-}
+      border-radius: 0px 0px 20px 20px;
+ }
 
 .mobileMenu-links-container {
     display: flex;
@@ -192,6 +190,10 @@
 
 .burgerButton {
     display: none;
+}
+
+.webNavLinks-mobile{
+    font-size: 25px;
 }
  
 @media (max-width:900px){

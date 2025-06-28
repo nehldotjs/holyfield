@@ -19,6 +19,7 @@ function Nav() {
       }, delay);
     });
   }, []); // The empty dependency array ensures this runs once when the component mounts
+
   const getStyle = (index) => {
     const active = activeIndices.includes(index);
     const opacity = ["1", "1", "1", "1", "1", "1", "1", "1"];
@@ -32,6 +33,7 @@ function Nav() {
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   return (
     <div className="nav-wrapper" style={getStyle(1)}>
       <div className="nav-container">
@@ -68,13 +70,13 @@ function Nav() {
             : "mobileMenu-links-wrapper isMobileLink"
         }>
         <div className="mobileMenu-links-container">
-          <Link onClick={handleClick} className="webNavLinks" to="/">
+          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/">
             Home
           </Link>
-          <Link onClick={handleClick} className="webNavLinks" to="/about">
+          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/about">
             About
           </Link>
-          <a className="webNavLinks" href="#contact">
+          <a className="webNavLinks webNavLinks-mobile" href="#contact">
             Contact
           </a>
         </div>

@@ -28,7 +28,11 @@
     font-size: 61px;
     font-weight: 700;
     text-transform: capitalize;
-    color: #191919;
+    color: #4d4d4d;
+}
+
+.hero-wrapper h1 br {
+    display: none;
 }
 
 .hero-wrapper h1 span {
@@ -41,12 +45,14 @@
     font-size: 18px;
     font-weight: normal;
     gap: 20px;
-    width: 80%;
-    color: #191919;
+    width: 100%;
+    color: #4d4d4d;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 30px;
+
+    text-transform: capitalize;
 }
 
 .hero-button {
@@ -632,6 +638,37 @@
 
 /* ========== Responsive ========== */
 @media (max-width: 900px) {
+    .blobWrapper {
+        /* background-color: red; */
+
+        position: absolute;
+        transform: translateY(-50%);
+        height: auto;
+        right: 0px;
+        width: auto;
+        z-index: -1;
+        top: 0%;
+        animation: float 2s ease-in-out infinite;
+    }
+
+    .blob {
+        width: 300px;
+        height: 300px;
+        background: #94B4C1;
+        z-index: 1;
+        clip-path: shape(from 85.70% 51.87%, curve to 82.41% 71.97% with 82.13% 60.44%, curve to 71.46% 83.87% with 82.69% 83.49%, curve to 52.33% 81.33% with 60.22% 84.25%, curve to 32.29% 82.79% with 44.44% 78.41%, curve to 12.81% 78.29% with 20.14% 87.18%, curve to 13.22% 58.64% with 5.47% 69.40%, curve to 19.50% 39.02% with 20.96% 47.89%, curve to 26.45% 27.20% with 18.05% 30.15%, curve to 41.32% 14.23% with 34.85% 24.24%, curve to 57.06% 9.53% with 47.79% 4.22%, curve to 74.69% 19.80% with 66.33% 14.85%, curve to 86.16% 34.02% with 83.05% 24.75%, curve to 85.70% 51.87% with 89.27% 43.29%);
+    }
+
+    .shapes-wrapper {
+        top: 85%;
+        left: 0px;
+
+    }
+
+    .wavy-circle {
+        --s: 100px;
+    }
+
     .hero-wrapper {
         width: 90%;
         padding-top: 30%;
@@ -640,18 +677,21 @@
 
     .hero-wrapper h1 {
         font-size: 30.5px;
+        font-weight: 900;
+        width: 100%;
     }
 
     .hero-wrapper h1 br {
-        display: none;
+        display: flex;
     }
 
     .hero-wrapper .hero-paragraph-container {
         font-size: 18px;
         gap: 20px;
         width: 100%;
-        padding: 30px;
+        padding:30px 0px;
     }
+
 
     /* ____________________________ */
 
@@ -691,7 +731,7 @@
         background-color: #ff582b;
         border-radius: 50%;
         position: absolute;
-        bottom: 2px;
+        bottom: -0.8px;
     }
 
     .h-section2-img-wrapper img {

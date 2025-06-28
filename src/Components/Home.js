@@ -74,7 +74,7 @@ function Home() {
         </div>
 
         <h1 style={getStyle(3)}>
-          Unlock New Opportunities with Holy Field — Your Gateway to Global
+          Unlock New Opportunities with <br /> Holy Field — Your Gateway to Global
           Possibilities
         </h1>
 
