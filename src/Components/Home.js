@@ -95,19 +95,20 @@ function Home() {
       <div className="home-section2">
         <div className="h-section2-text-Wrapper">
           <h1 data-aos="fade-up">
-            Explore Our Comprehensive Visa Processing Services Tailored for Your
-            Needs
+            Explore Seamless, Personalized Financial Solutions and Travel
+            Support Crafted Just for You
           </h1>
           <p data-aos="fade-up">
-            Navigating the world of visas can be complex. Our dedicated team
-            simplifies the process, ensuring you find the right visa solution.
+            Navigating the world of Finances can be complex. Our dedicated team
+            simplifies the process, ensuring you find the right Finance
+            solution.
           </p>
           <div className="types-wrapper">
             <div className="type" data-aos="fade-up">
-              <h2>Types of Visa</h2>
+              <h2>Types of Finance</h2>
               <p>
-                We offer school, visiting, work, and immigration visas to meet
-                your needs.
+                We provide financial support for school, visiting, work, and
+                immigration travel to help meet your unique needs.
               </p>
             </div>
             <div className="type" data-aos="fade-up">
@@ -135,7 +136,7 @@ function Home() {
               <img src={airport} alt="" />
             </div>
             <h3 className="hs3-header">
-              Tailored Solutions for All Your Visa Financial Requirements
+              Tailored Solutions for All Your Everyday Financial Requirements
             </h3>
             <p>
               We provide essential documentation and financial support to
