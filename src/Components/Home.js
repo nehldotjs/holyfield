@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../styles/hero.css";
 import DiscoverButton from "../PropAssets/DiscoverBtn";
+import "../styles/hero.css";
 
 import friendsImage from "../Assets/images/model.png";
 import receptionist from "../Assets/images/receptionists-5975962_1920.jpg";
@@ -9,17 +9,18 @@ import airport from "../Assets/images/airport-1822133_1920.jpg";
 import assist from "../Assets/images/credit-cards-1583534_1280.jpg";
 import plan from "../Assets/images/finance.jpg";
 
-import { HiMiniBanknotes } from "react-icons/hi2";
 import { TbMathSymbols, TbTruckDelivery } from "react-icons/tb";
+import { HiMiniBanknotes } from "react-icons/hi2";
 import { MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 
 import Testimonial from "../PropAssets/Testimonial";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import { IoStatsChartSharp } from "react-icons/io5";
 import { FaPhoneAlt, FaRoute } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [activeIndices, setActiveIndices] = useState([]);
@@ -86,7 +87,9 @@ function Home() {
           </p>
         </div>
 
-        <DiscoverButton style={getStyle(5)} />
+        <Link to="/" style={({ textDecoration: "none" }, getStyle(5))}>
+          <DiscoverButton />
+        </Link>
       </div>
 
       <div className="home-section2">

@@ -3,12 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../customs/carousel.css";
- 
+
 const Carousel = ({ data, render, sliderRef }) => {
   const settings = {
     dots: false,
     infinite: true,
-    centerMode: true,
+    centerMode: false,
     centerPadding: "1.0px",
     slidesToShow: 3,
     speed: 500,
@@ -19,7 +19,7 @@ const Carousel = ({ data, render, sliderRef }) => {
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 2, centerPadding: "40px" }
+        settings: { slidesToShow: 1, centerPadding: "40px" }
       },
       {
         breakpoint: 768,
@@ -36,7 +36,7 @@ const Carousel = ({ data, render, sliderRef }) => {
             {render(item, index)}
           </div>
         ))}
-      </Slider> 
+      </Slider>
     </div>
   );
 };

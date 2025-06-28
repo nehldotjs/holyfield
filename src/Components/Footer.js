@@ -35,9 +35,25 @@ function Footer() {
         </div>
 
         <div className="footer-links">
+          <h2>Our Services</h2>
+          <p className="footerLink">
+            Financial Support{" "}
+          </p>
+          <p className="footerLink">
+            Travel Processing Services{" "}
+          </p>
+          <p className="footerLink">
+            Loan Services{" "}
+          </p>
+          <p
+           className="footerLink">
+            Bank Reference Assistance (POF – Personal & Corporate Accounts){" "}
+          </p>
+        </div>
+
+        <div className="footer-links">
           <h2>Contact Us</h2>
           <Link onClick={handleClick} className="footerLink">
-            {" "}
             456 Example Ave, Melbourne VIC 3000 AU
           </Link>
           <Link onClick={handleClick} className="footerLink">

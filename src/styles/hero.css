@@ -36,7 +36,7 @@
 }
 
 .hero-wrapper h1 span {
-    color: orangered;
+    color: #006aff;
     display: inline;
 }
 
@@ -59,7 +59,7 @@
     font-size: 15px;
     padding: 30px;
     border-radius: 50px;
-    background-color: #FF7D29;
+    background-color: #006aff;
     border: none;
     color: white;
 }
@@ -105,7 +105,7 @@
     --s: 150px;
     width: var(--s);
     aspect-ratio: 1;
-    background-color: #FF7D29;
+    background-color: #a8d800;
     z-index: 1;
     animation: spin 60s linear infinite;
 
@@ -513,9 +513,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 0px;
     z-index: -1;
-    /* background-color: yellowgreen; */
 }
 
 .contact-id {
@@ -543,7 +542,7 @@
 }
 
 .hs7-top-section h1 {
-    color: #FF7D29;
+    color: #006aff;
 }
 
 .pTag-desc {
@@ -690,7 +689,7 @@
         font-size: 18px;
         gap: 20px;
         width: 100%;
-        padding:30px 0px;
+        padding: 30px 0px;
     }
 
 
