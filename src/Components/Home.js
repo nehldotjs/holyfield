@@ -153,11 +153,12 @@ function Home() {
               <img src={finance} alt="" />
             </div>
             <h3 className="hs3-header">
-              Expert Assistance in Proof of Funds and Financial Documentation
+              Reliable Assistance with Financial Endorsements and Supporting
+              Documents{" "}
             </h3>
             <p>
               Our team ensures you have the necessary financial documents for a
-              successful application.
+              successful Visa application.
             </p>
           </div>
 
@@ -166,10 +167,11 @@ function Home() {
               <img src={assist} alt="" />
             </div>
             <h3 className="hs3-header">
-              Comprehensive Services for Loan Applications and Financial Support
+              Comprehensive Financial Support Services for Visa Applications and
+              Travel Needs
             </h3>
             <p>
-              We offer a range of loan options to meet your financial needs.
+              We offer a range of loan options to meet your financial travel needs.
             </p>
           </div>
         </div>
