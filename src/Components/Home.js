@@ -81,9 +81,9 @@ function Home() {
         <div className="hero-paragraph-container">
           <p style={getStyle(4)}>
             HolyField, we make your dreams of studying, working, traveling, or
-            expanding your experiences abroad a reality. Start your journey today
-            with confidence, knowing you have a dedicated partner that puts your
-            goals first.
+            expanding your experiences abroad a reality. Start your journey
+            today with confidence, knowing you have a dedicated partner that
+            puts your goals first.
           </p>
         </div>
 
@@ -107,15 +107,19 @@ function Home() {
             <div className="type" data-aos="fade-up">
               <h2>Types of Visas</h2>
               <p>
-                We provide financial support for school, visiting, work, and
-                immigration travel to help meet your unique needs.
+                We provide reliable financial support services tailored to
+                assist with your travel visa applications — including essential
+                documentation such as account statements, verification letters,
+                and supporting financial credentials to strengthen your
+                application.
               </p>
             </div>
             <div className="type" data-aos="fade-up">
               <h2>Get Started</h2>
               <p>
-                Contact us today to learn more about our visa processing
-                services!
+                Ready to begin your journey? Contact us today to discover how
+                our expert financial support and visa processing assistance can
+                simplify your travel plans and increase your chances of success!
               </p>
             </div>
           </div>

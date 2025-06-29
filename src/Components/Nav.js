@@ -39,7 +39,7 @@ function Nav() {
     <div className="nav-wrapper" style={getStyle(1)}>
       <div className="nav-container">
         <div className="nav-logo-wrapper">
-          <img style={getStyle(2)} src={Logo} alt="Holy field logo" />
+          <img style={getStyle(2)} src={Logo} alt="Holyfield logo" />
           <Link
             className="logoLink"
             to="/"

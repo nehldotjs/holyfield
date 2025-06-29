@@ -57,12 +57,12 @@ function About() {
             Industry Leader
           </h1>
           <p style={getStyle(2)}>
-            Founded in 2023, Holy Field began as a focused venture with a simple
+            Founded in 2023, HolyField began as a focused venture with a simple
             goal: to empower individuals and businesses with access to tailored
             financial solutions that help them achieve more. Over time, we have
             evolved into a trusted provider of flexible loan services and
             financial documentation support, committed to meeting the changing
-            needs of our growing client base. At Holy Field, we believe that
+            needs of our growing client base. At HolyField, we believe that
             everyone should be empowered to pursue their goals—whether it's
             expanding a business, managing personal growth, or preparing for
             international opportunities. We deliver this empowerment through
@@ -72,7 +72,7 @@ function About() {
             clients with key financial documentation—such as account summaries,
             income validation, tax records, and corporate filings—to support a
             wide range of personal, professional, and travel-related goals. With
-            a clear commitment to excellence and client success, Holy Field
+            a clear commitment to excellence and client success, HolyField
             continues to be a reliable partner for individuals and enterprises
             navigating financial decisions with confidence.
           </p>

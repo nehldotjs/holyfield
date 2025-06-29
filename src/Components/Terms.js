@@ -7,7 +7,7 @@ function Terms() {
       <h1>Terms of Service</h1>
 
       <p>
-        These Terms of Service ("Terms") govern your use of the Holy Field
+        These Terms of Service ("Terms") govern your use of the HolyField
         platform and services. By accessing or using our solutions, you agree to
         comply with these Terms. If you do not agree to any part of these Terms,
         please refrain from using our services.
@@ -15,7 +15,7 @@ function Terms() {
 
       <h2>Services Provided</h2>
       <p>
-        Holy Field offers comprehensive visa support documentation and financial
+        HolyField offers comprehensive visa support documentation and financial
         facilitation services to help individuals and businesses pursue
         international opportunities. Our services include, but are not limited
         to:
@@ -24,7 +24,7 @@ function Terms() {
       <ul>
         <li>
           <strong>Visa Processing Support:</strong> School, visiting, work, and
-          immigration visa documentation (Note: Holy Field does not issue or
+          immigration visa documentation (Note: HolyField does not issue or
           guarantee visas).
         </li>
         <li>
@@ -38,7 +38,7 @@ function Terms() {
       </ul>
 
       <h2>User Obligations</h2>
-      <p>By using Holy Field, you agree to:</p>
+      <p>By using HolyField, you agree to:</p>
       <ul>
         <li>
           Provide accurate, current, and complete information when creating an
@@ -72,7 +72,7 @@ function Terms() {
 
       <h2>Limitation of Liability</h2>
       <p>
-        Holy Field shall not be liable for any indirect, incidental, or
+        HolyField shall not be liable for any indirect, incidental, or
         consequential damages resulting from your use of our services. We do not
         guarantee uninterrupted availability or error-free operation of our
         platform.
@@ -88,7 +88,7 @@ function Terms() {
 
       <h2>Changes to Terms</h2>
       <p>
-        Holy Field may revise these Terms of Service periodically. Any updates
+        HolyField may revise these Terms of Service periodically. Any updates
         will be posted on this page with an updated effective date. Continued
         use of our services after changes constitutes acceptance of the new
         Terms.
@@ -97,7 +97,7 @@ function Terms() {
       <h2>Governing Law</h2>
       <p>
         These Terms shall be governed by and construed in accordance with the
-        laws of the jurisdiction in which Holy Field operates.
+        laws of the jurisdiction in which HolyField operates.
       </p>
 
       <h2>Contact Information</h2>

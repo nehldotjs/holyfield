@@ -15,8 +15,8 @@ function Footer() {
       <div className="footer-links-wrapper">
         <div className="footerLogoWrapper">
           <Link onClick={handleClick} className="footerLogoContainer">
-            <img src={logo} alt="holy field logo" />
-            <h2>Holy Field</h2>
+            <img src={logo} alt="holyfield logo" />
+            <h2>HolyField</h2>
           </Link>
           <SocialButton />
         </div>

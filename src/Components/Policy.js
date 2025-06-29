@@ -7,7 +7,7 @@ function Policy() {
       <h1>Privacy Policy</h1>
 
       <p>
-        At <strong>Holy Field</strong>, we respect your privacy and are
+        At <strong>HolyField</strong>, we respect your privacy and are
         committed to protecting your personal information. This Privacy Policy
         outlines how we collect, use, and safeguard your data while using our
         last-mile delivery solutions and logistics software. By using our
