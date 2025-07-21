@@ -29,9 +29,7 @@ function Footer() {
           <Link onClick={handleClick} to="/about" className="ql footerLink">
             About
           </Link>
-          {/* <Link onClick={handleClick} to="/service" className="footerLink">
-            Service
-          </Link> */}
+          
         </div>
 
         <div className="footer-links">

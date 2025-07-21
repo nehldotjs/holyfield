@@ -23,7 +23,7 @@ function CorneredButton() {
     {
       question: "How can I get started with HOLY-FIELD?",
       answer:
-        "Getting started is easy! Simply create an account through our website or mobile application. All our services are accessible on both platforms.\n\n" +
+        "Getting started is simple! Just send us a message directly through the contact form or reach out to an agent via WhatsApp — no sign-up required.\n\n" +
         "Need assistance? Reach out to us on WhatsApp or send an email to info@holyfield.com. We’ll be happy to guide you every step of the way."
     }
   ];
@@ -32,6 +32,7 @@ function CorneredButton() {
   const toggleFaq = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+  
   return (
     <div className="sideButtonWrapper">
       <button

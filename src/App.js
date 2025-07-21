@@ -9,6 +9,7 @@ import CorneredButton from "./PropAssets/CorneredButton";
 import Home from "./Components/Home";
 import Policy from "./Components/Policy";
 import Terms from "./Components/Terms";
+import BookACall from "./Components/BookAcallForm";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/policy" element={<Policy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/book-a-call-with-us" element={<BookACall />} />
       </Routes>
       <Footer />
       <CorneredButton />

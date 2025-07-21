@@ -13,8 +13,7 @@
  }
 
  @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Jersey+15&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-
-
+ @import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap');
  * {
    font-family: "Mulish", "GFS Didot", sans-serif, 'Gilroy', sans-serif;
    padding: 0px;
@@ -31,8 +30,8 @@
    display: flex;
    width: 100%;
    height: auto;
-    height: auto;
+   height: auto;
    position: fixed;
    top: 15px;
    z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
-  }
+ }

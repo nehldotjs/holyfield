@@ -2,43 +2,43 @@ import React, { useEffect, useState } from "react";
 import DiscoverButton from "../PropAssets/DiscoverBtn";
 import "../styles/hero.css";
 
-import friendsImage from "../Assets/images/model.png";
 import receptionist from "../Assets/images/receptionists-5975962_1920.jpg";
-import finance from "../Assets/images/laptop-3196481_1920.jpg";
-import airport from "../Assets/images/airport-1822133_1920.jpg";
 import assist from "../Assets/images/credit-cards-1583534_1280.jpg";
+import airport from "../Assets/images/airport-1822133_1920.jpg";
+import finance from "../Assets/images/laptop-3196481_1920.jpg";
+import friendsImage from "../Assets/images/model.png";
 import plan from "../Assets/images/finance.jpg";
 
-import { TbMathSymbols, TbTruckDelivery } from "react-icons/tb";
-import { HiMiniBanknotes } from "react-icons/hi2";
-import { MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
+import { MdLocationOn } from "react-icons/md";
+import { HiMiniBanknotes } from "react-icons/hi2";
+import { TbMathSymbols, TbTruckDelivery } from "react-icons/tb";
 
 import Testimonial from "../PropAssets/Testimonial";
-import AOS from "aos";
 import "aos/dist/aos.css";
+import AOS from "aos";
 
 import { IoStatsChartSharp } from "react-icons/io5";
 import { FaPhoneAlt, FaRoute } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import CountUp from "../PropAssets/CountDown";
+import BookACall from "./BookAcallForm";
 
 function Home() {
   const [activeIndices, setActiveIndices] = useState([]);
-
+  const [isCall, setIsCall] = useState(false);
   useEffect(() => {
     const delays = [300, 200, 500, 700, 1000, 1200, 1600, 1800];
     setActiveIndices([]);
     delays.forEach((delay, index) => {
       setTimeout(() => {
-        setActiveIndices((prev) => [...prev, index]);
+        setActiveIndices(prev => [...prev, index]);
       }, delay);
     });
   }, []);
 
-  const getStyle = (index) => {
+  const getStyle = index => {
     const active = activeIndices.includes(index);
     const opacity = ["1", "1", "1", "1", "1", "1", "1", "1"];
-
     return {
       transition: "all 1s ease-in-out",
       opacity: active ? opacity[index] : "0"
@@ -49,7 +49,6 @@ function Home() {
     AOS.init({
       duration: 1000,
       once: true,
-
       offset: 120,
       delay: 0,
       easing: "ease",
@@ -63,14 +62,15 @@ function Home() {
       <div className="hero-wrapper">
         <div
           style={getStyle(1)}
-          className="shapes-wrapper style={getStyle(4)} ">
+          className="shapes-wrapper style={getStyle(4)} "
+        >
           <div className="wavy-float">
-            <div className="wavy-circle"></div>
+            <div className="wavy-circle" />
           </div>
         </div>
 
         <div className="blobWrapper" style={getStyle(2)}>
-          <div className="blob"></div>
+          <div className="blob" />
         </div>
 
         <h1 style={getStyle(3)}>
@@ -91,7 +91,6 @@ function Home() {
           <DiscoverButton />
         </div>
       </div>
-
       <div className="home-section2">
         <div className="h-section2-text-Wrapper">
           <h1 data-aos="fade-up">
@@ -125,11 +124,10 @@ function Home() {
           </div>
         </div>
         <div className="h-section2-img-wrapper" data-aos="fade-up">
-          <div className="imgBackgroundOverlay" data-aos="fade-right"></div>
+          <div className="imgBackgroundOverlay" data-aos="fade-right" />
           <img src={friendsImage} alt="" data-aos="fade-up" />
         </div>
       </div>
-
       <div className="home-section3">
         <h1 data-aos="fade-up" className="section3-header">
           Comprehensive Financial Support Services for Your Visa Needs
@@ -171,12 +169,83 @@ function Home() {
               Travel Needs
             </h3>
             <p>
-              We offer a range of loan options to meet your financial travel needs.
+              We offer a range of loan options to meet your financial travel
+              needs.
             </p>
           </div>
         </div>
-      </div>
 
+        <div className="service-success">
+          <p>Delivering value</p>
+          <div className="home-s-content-wrapper">
+            <div className="home-s-content-wrapper-1">
+              <h1>our achievements</h1>
+              <p>
+                With a foundation built on over years of experience, we began as
+                a creative-focused brand with one mission: to elevate businesses
+                through innovative digital transformation. Over the years, we’ve
+                grown into a trusted partner for ambitious brands, offering
+                strategy-led design, branding, and digital solutions that drive
+                visibility, engagement, and growth.
+              </p>
+              <div className="home-booking-button-wrapper">
+                <button
+                  onClick={() => setIsCall(!isCall)}
+                  to="book-a-call-with-us"
+                >
+                  book a call
+                </button>
+              </div>
+            </div>
+            <div className="home-s-content-wrapper-2">
+              <div className="countdown-1">
+                <CountUp
+                  from={0}
+                  to={300}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />
+                <p>digital solutions delivered</p>
+              </div>
+              <div className="countdown-1">
+                <CountUp
+                  from={0}
+                  to={120}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />
+                <p>successful collaboration </p>
+              </div>
+              <div className="countdown-1">
+                <CountUp
+                  from={0}
+                  to={2}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />
+                <p>years of experience </p>
+              </div>
+              <div className="countdown-1">
+                <CountUp
+                  from={0}
+                  to={35}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />
+                <p>brands created</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="home-section4">
         <div className="hs4-container1" data-aos="fade-up">
           <p className="p-heading">Loan</p>
@@ -225,7 +294,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div className="home-section5">
         <div className="hs5-section1">
           <p data-aos="fade-up" className="hs5-p-header">
@@ -276,9 +344,7 @@ function Home() {
       <div className="home-testimonial-Wrapper">
         <Testimonial />
       </div>
-
-      <div className="contact-id" id="contact"></div>
-
+      <div className="contact-id" id="contact" />
       <div className="home-section7" id="contact">
         <div className="hs7-top-section">
           <p className="hs7-pTag-header">Connect</p>
@@ -320,6 +386,22 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div
+        className={
+          isCall ? "book-a-call-section isCallActive" : "book-a-call-section"
+        }
+      >
+        <div className="isCallCloseButtonWrapper">
+          <button
+            onClick={() => setIsCall(!isCall)}
+            className="call-cancel-button"
+          >
+            close
+          </button>
+        </div>
+        <BookACall />
       </div>
     </div>
   );
