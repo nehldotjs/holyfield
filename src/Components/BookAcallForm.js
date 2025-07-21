@@ -1,108 +1,136 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { toast } from "react-toastify";
+import "../styles/BookAcallForm.css";
 
-export default function BookACall() {
+export default function BookingForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     reason: "",
     dateTime: null,
-    duration: 30
+    duration: 15
   });
 
   const [submitted, setSubmitted] = useState(false);
-
-  const generateGoogleCalendarURL = ({
-    name,
-    email,
-    phone,
-    reason,
-    dateTime,
-    duration
-  }) => {
-    const startDate = new Date(dateTime)
-      .toISOString()
-      .replace(/-|:|\.\d+/g, "");
-    const endDate = new Date(dateTime.getTime() + duration * 60000)
-      .toISOString()
-      .replace(/-|:|\.\d+/g, "");
-
-    const details = {
-      text: `Call with ${name}`,
-      dates: `${startDate}/${endDate}`,
-      details: `Name: ${name}\nEmail: ${email}\nReason: ${reason}`,
-      location: "Zoom/Phone/Online",
-      add: "nelsonosuya11@gmail.com" // 👈 your email goes here
-    };
-
-    const params = new URLSearchParams(details).toString();
-    return `https://calendar.google.com/calendar/r/eventedit?${params}`;
-  };
 
   const handleChange = e => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: name === "duration" ? parseInt(value) : value
+      [name]: value
     }));
   };
 
   const handleDateChange = date => {
-    setFormData({ ...formData, dateTime: date });
+    setFormData(prev => ({
+      ...prev,
+      dateTime: date
+    }));
   };
 
-  const handleSubmit = e => {
+  const generateGoogleCalendarURL = data => {
+    const start = new Date(data.dateTime);
+    const end = new Date(start.getTime() + data.duration * 60000);
+    const format = date => date.toISOString().replace(/-|:|\.\d\d\d/g, "");
+
+    return `https://calendar.google.com/calendar/u/0/r/eventedit?text=Call+Booking+with+${encodeURIComponent(
+      data.name
+    )}&dates=${format(start)}/${format(end)}&details=${encodeURIComponent(
+      data.reason
+    )}&location=Online`;
+  };
+
+  const resetForm = () => {
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      reason: "",
+      dateTime: null,
+      duration: 15
+    });
+  };
+
+  const handleSubmit = async e => {
     e.preventDefault();
 
-    if (!formData.dateTime) {
-      alert("Please select a date and time.");
-      return;
-    }
+    const payload = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      payload.append(key, value);
+    });
 
-    setSubmitted(true);
-    const url = generateGoogleCalendarURL(formData);
-    window.open(url, "_blank");
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/nelsonosuya11@gmail.com",
+        {
+          method: "POST",
+          body: payload
+        }
+      );
+
+      const result = await response.json();
+
+      if (result.success === "true" || result.result === "success") {
+        toast.success("Your call was booked!");
+        setSubmitted(true);
+        resetForm();
+
+        setTimeout(() => {
+          const calendarURL = generateGoogleCalendarURL(formData);
+          window.open(calendarURL, "_blank");
+        }, 800);
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      toast.error("Submission failed. Check your internet or try again later.");
+      console.error(err);
+    }
   };
 
   return (
-    <div className="book-call-container">
-      {/* <h2 className="book-call-heading">📞 Book a Call</h2> */}
+    <div style={{ maxWidth: "600px", margin: "0 auto" }}>
       {submitted
-        ? <div className="book-call-success">
+        ? <div className="book-call-success fade-in">
             ✅ Call booked successfully! We’ll reach out soon.
           </div>
-        : <form onSubmit={handleSubmit} className="book-call-form">
+        : <form onSubmit={handleSubmit} className="book-call-form fade-in">
             <div className="user-info-wrapper">
               <input
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                required
                 value={formData.name}
                 onChange={handleChange}
                 className="form-input"
+                required
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                required
                 value={formData.email}
                 onChange={handleChange}
                 className="form-input"
-              />{" "}
+                required
+              />
             </div>
+
             <input
               type="tel"
               name="phone"
-              placeholder="Your mobile"
-              required
+              placeholder="Your Mobile"
               value={formData.phone}
               onChange={handleChange}
               className="form-input"
-            />{" "}
+              pattern="[0-9]{10,}"
+              title="Enter a valid phone number (at least 10 digits)"
+              required
+            />
+
             <textarea
               name="reason"
               placeholder="Reason for the call"
@@ -110,7 +138,9 @@ export default function BookACall() {
               value={formData.reason}
               onChange={handleChange}
               className="form-textarea"
+              required
             />
+
             <div className="user-info-wrapper">
               <div className="form-group">
                 <label className="form-label">Choose Date & Time</label>
@@ -125,6 +155,7 @@ export default function BookACall() {
                   placeholderText="Select date & time"
                   className="form-input"
                   minDate={new Date()}
+                  required
                 />
               </div>
 
@@ -143,6 +174,7 @@ export default function BookACall() {
                 </select>
               </div>
             </div>
+
             <button type="submit" className="form-button">
               Confirm
             </button>

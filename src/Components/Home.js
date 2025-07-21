@@ -393,15 +393,17 @@ function Home() {
           isCall ? "book-a-call-section isCallActive" : "book-a-call-section"
         }
       >
-        <div className="isCallCloseButtonWrapper">
-          <button
-            onClick={() => setIsCall(!isCall)}
-            className="call-cancel-button"
-          >
-            close
-          </button>
+        <div className="bookingContainer">
+          <div className="isCallCloseButtonWrapper">
+            <button
+              onClick={() => setIsCall(!isCall)}
+              className="call-cancel-button"
+            >
+              close
+            </button>
+          </div>
+          <BookACall />
         </div>
-        <BookACall />
       </div>
     </div>
   );
