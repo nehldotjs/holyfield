@@ -1105,8 +1105,11 @@
         flex-direction: column;
         background-color: white;
         padding: 50px 20px;
+        border-radius: 20px ;
     }
-
+.home-booking-button-wrapper button {
+  margin: auto;
+}
     .home-s-content-wrapper {
         display: flex;
         align-items: center;
