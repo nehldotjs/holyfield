@@ -141,21 +141,26 @@
         flex-direction: column;
     }
 
+    .contact-svg-wrapper {
+        max-width: 90%;
+    }
+
     .contact-svg-wrapper img {
         height: 200px;
-        width: auto;
+        width: 100%;
         object-fit: contain;
         margin: auto;
         display: flex;
     }
 
     .contact-write-up h1 {
-        width: 100%;
+        width: 100%; 
+
     }
 
     .contact-write-up h1 span {
         text-align: center;
-        font-size: 60px;
+        font-size: 50px;
         margin: auto;
         width: 100%;
     }
