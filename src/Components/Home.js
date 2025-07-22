@@ -24,8 +24,8 @@ import CountUp from "../PropAssets/CountDown";
 import BookACall from "./BookAcallForm";
 
 function Home() {
-  const [activeIndices, setActiveIndices] = useState([]);
   const [isCall, setIsCall] = useState(false);
+  const [activeIndices, setActiveIndices] = useState([]);
   useEffect(() => {
     const delays = [300, 200, 500, 700, 1000, 1200, 1600, 1800];
     setActiveIndices([]);
@@ -39,10 +39,7 @@ function Home() {
   const getStyle = index => {
     const active = activeIndices.includes(index);
     const opacity = ["1", "1", "1", "1", "1", "1", "1", "1"];
-    return {
-      transition: "all 1s ease-in-out",
-      opacity: active ? opacity[index] : "0"
-    };
+    return { transition: "all 1s ease-in-out", opacity: active ? opacity[index] : "0" };
   };
 
   useEffect(() => {

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import "../styles/contact.css";
-
+import "aos/dist/aos.css";
+import AOS from "aos";
 import contactSvg from "../Assets/svg/contact-us-svg.svg";
 
 export default function ContactPage() {
@@ -14,6 +15,38 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  const [activeIndices, setActiveIndices] = useState([]);
+  useEffect(() => {
+    const delays = [300, 200, 500, 700, 1000, 1200, 1600, 1800];
+    setActiveIndices([]);
+    delays.forEach((delay, index) => {
+      setTimeout(() => {
+        setActiveIndices(prev => [...prev, index]);
+      }, delay);
+    });
+  }, []);
+
+  const getStyle = index => {
+    const active = activeIndices.includes(index);
+    const opacity = ["1", "1", "1", "1", "1", "1", "1", "1"];
+    return {
+      transition: "all 1s ease-in-out",
+      opacity: active ? opacity[index] : "0"
+    };
+  };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 120,
+      delay: 0,
+      easing: "ease",
+      mirror: false,
+      anchorPlacement: "top-bottom"
+    });
+  }, []);
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -65,29 +98,29 @@ export default function ContactPage() {
     <div className="contact-form-container fade-in">
       <div className="contact-svg-wrapper">
         <div className="contact-write-up">
-          <h1>
+          <h1 style={getStyle(1)}>
             Get in Touch with <br />
             <span>Holy-Field</span>
           </h1>
-          <p>
+          <p style={getStyle(2)}>
             Whether you have a question, need support, or just want to say hello
             — we're here to help. Your satisfaction is our priority, and we look
             forward to hearing from you!
           </p>
         </div>
-        <img src={contactSvg} alt="" />
+        <img style={getStyle(3)} src={contactSvg} alt="" />
 
-        <p className="contact-subText">
+        <p style={getStyle(4)} className="contact-subText">
           Reach out to us anytime and our team will get back to you.
         </p>
       </div>
       <div className="contactForm-wrapper">
         {submitted
-          ? <p className="success-message">
+          ? <p style={getStyle(7)} className="success-message">
               ✅ Thank you for reaching out. We'll get back to you shortly!
             </p>
           : <form onSubmit={handleSubmit} className="book-call-form">
-              <div className="form-group">
+              <div style={getStyle(5)} className="form-group">
                 <input
                   type="text"
                   name="name"
@@ -98,7 +131,7 @@ export default function ContactPage() {
                   required
                 />
               </div>
-              <div className="form-group">
+              <div style={getStyle(6)} className="form-group">
                 <input
                   type="phone"
                   name="phone"
@@ -119,7 +152,7 @@ export default function ContactPage() {
                   required
                 />
               </div>
-              <div className="form-group">
+              <div style={getStyle(6)} className="form-group">
                 <input
                   type="text"
                   name="subject"
@@ -130,7 +163,7 @@ export default function ContactPage() {
                   required
                 />
               </div>
-              <div className="form-group">
+              <div style={getStyle(6)} className="form-group">
                 <textarea
                   name="message"
                   className="form-textarea"
@@ -141,10 +174,7 @@ export default function ContactPage() {
                   required
                 />
               </div>
-              <button
-                type="submit"
-                className="form-button"
-               >
+              <button style={getStyle(5)} type="submit" className="form-button">
                 Send Message
               </button>
             </form>}
