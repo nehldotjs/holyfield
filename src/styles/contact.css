@@ -102,6 +102,14 @@
     height: auto;
 }
 
+.form-button {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
 .fade-in {
     animation: fadeIn 0.6s ease-in;
 }

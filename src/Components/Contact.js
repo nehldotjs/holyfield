@@ -141,7 +141,10 @@ export default function ContactPage() {
                   required
                 />
               </div>
-              <button type="submit" className="form-button">
+              <button
+                type="submit"
+                className="form-button"
+               >
                 Send Message
               </button>
             </form>}

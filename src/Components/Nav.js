@@ -3,6 +3,9 @@ import "../styles/nav.css";
 
 import Logo from "../Assets/images/3bf53f3da3d8c792b88e415ffe37d611fd47e0b296bcb588b656262e105731f5.svg";
 import { Link } from "react-router-dom";
+import { GoHomeFill } from "react-icons/go";
+import { FaInfoCircle } from "react-icons/fa";
+import { MdOutlineConnectWithoutContact } from "react-icons/md";
 
 function Nav() {
   const [isMenu, setIsMenu] = useState(false);
@@ -15,12 +18,12 @@ function Nav() {
 
     delays.forEach((delay, index) => {
       setTimeout(() => {
-        setActiveIndices((prev) => [...prev, index]);
+        setActiveIndices(prev => [...prev, index]);
       }, delay);
     });
   }, []); // The empty dependency array ensures this runs once when the component mounts
 
-  const getStyle = (index) => {
+  const getStyle = index => {
     const active = activeIndices.includes(index);
     const opacity = ["1", "1", "1", "1", "1", "1", "1", "1"];
 
@@ -29,34 +32,41 @@ function Nav() {
       opacity: active ? opacity[index] : "0"
     };
   };
- 
+
   const handleClick = () => {
     setIsMenu(!isMenu);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  return <div className="nav-wrapper" style={getStyle(1)}>
+  return (
+    <div className="nav-wrapper" style={getStyle(1)}>
       <div className="nav-container">
         <div className="nav-logo-wrapper">
           <img style={getStyle(2)} src={Logo} alt="Holyfield logo" />
-          <Link className="logoLink" to="/" onClick={() => window.scrollTo({
+          <Link
+            className="logoLink"
+            to="/"
+            onClick={() =>
+              window.scrollTo({
                 top: 0,
                 behavior: "smooth"
-              })}>
+              })}
+          >
             <h3 style={getStyle(3)}>HolyField</h3>
           </Link>
         </div>
         <div style={getStyle(4)} className="nav-web-links">
           <Link onClick={handleClick} className="webNavLinks" to="/">
+            <GoHomeFill />
             Home
           </Link>
           <Link onClick={handleClick} className="webNavLinks" to="/about">
-            About
+            <FaInfoCircle /> About
           </Link>
           <Link onClick={handleClick} className="webNavLinks" to="/contact-us">
+            <MdOutlineConnectWithoutContact />
             Contact
           </Link>
- 
         </div>
         <div className="nav-mobile-links">
           <button className="burgerButton" onClick={() => setIsMenu(!isMenu)}>
@@ -66,21 +76,40 @@ function Nav() {
           </button>
         </div>
       </div>
-      <div className={isMenu ? "mobileMenu-links-wrapper" : "mobileMenu-links-wrapper isMobileLink"}>
+      <div
+        className={
+          isMenu
+            ? "mobileMenu-links-wrapper"
+            : "mobileMenu-links-wrapper isMobileLink"
+        }
+      >
         <div className="mobileMenu-links-container">
-          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/">
+          <Link
+            onClick={handleClick}
+            className="webNavLinks webNavLinks-mobile"
+            to="/"
+          >
             Home
           </Link>
-          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/about">
+          <Link
+            onClick={handleClick}
+            className="webNavLinks webNavLinks-mobile"
+            to="/about"
+          >
             About
           </Link>
-         
-          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/contact-us">
+
+          <Link
+            onClick={handleClick}
+            className="webNavLinks webNavLinks-mobile"
+            to="/contact-us"
+          >
             Contact
           </Link>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 }
 
 export default Nav;
