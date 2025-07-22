@@ -807,7 +807,7 @@
  .bookingContainer {
      display: flex;
      flex-direction: column;
-     width: auto;
+     width: 95%;
 
 
      position: relative;
