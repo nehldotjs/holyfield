@@ -4,7 +4,7 @@ import "../styles/contact.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import contactSvg from "../Assets/svg/contact-us-svg.svg";
-
+ 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -94,7 +94,8 @@ export default function ContactPage() {
     }
   };
 
-  return (
+  return (<>
+
     <div className="contact-form-container fade-in">
       <div className="contact-svg-wrapper">
         <div className="contact-write-up">
@@ -179,6 +180,10 @@ export default function ContactPage() {
               </button>
             </form>}
       </div>
+
+
     </div>
+ 
+    </>
   );
 }
