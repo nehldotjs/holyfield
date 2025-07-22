@@ -56,10 +56,7 @@ function Nav() {
           <Link onClick={handleClick} className="webNavLinks" to="/contact-us">
             Contact
           </Link>
-
-          <a className="webNavLinks" href="#contact">
-            Contact
-          </a>
+ 
         </div>
         <div className="nav-mobile-links">
           <button className="burgerButton" onClick={() => setIsMenu(!isMenu)}>
@@ -77,9 +74,7 @@ function Nav() {
           <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/about">
             About
           </Link>
-          {/* <a className="webNavLinks webNavLinks-mobile" href="#contact">
-            Contact
-          </a> */}
+         
           <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/contact-us">
             Contact
           </Link>
