@@ -39,7 +39,7 @@
     text-transform: uppercase;
     font-weight: 900;
     background: linear-gradient(to top left, #006aff,
-            #0b4058, #00b7ff);
+            #022c7afd, #00b7ff);
     /* Choose your gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
