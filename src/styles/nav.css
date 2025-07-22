@@ -194,15 +194,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-
-    border-radius: 0px 0px 20px 20px;
-}
-
-.mobileMenu-links-container {
-    display: flex;
-    flex-direction: column;
     gap: 10px;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .burgerButton {
@@ -211,12 +204,12 @@
 
 .webNavLinks-mobile {
     font-size: 25px;
-    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: auto;
+    padding: 10px;
 }
 
 @media (max-width:900px) {

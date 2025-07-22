@@ -46,11 +46,10 @@ function Nav() {
           <Link
             className="logoLink"
             to="/"
-            onClick={() =>
-              window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-              })}
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              setIsMenu(false);
+            }}
           >
             <h3 style={getStyle(3)}>HolyField</h3>
           </Link>
