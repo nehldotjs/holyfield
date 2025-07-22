@@ -35,15 +35,14 @@ function Nav() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  return (
-    <div className="nav-wrapper" style={getStyle(1)}>
+  return <div className="nav-wrapper" style={getStyle(1)}>
       <div className="nav-container">
         <div className="nav-logo-wrapper">
           <img style={getStyle(2)} src={Logo} alt="Holyfield logo" />
-          <Link
-            className="logoLink"
-            to="/"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <Link className="logoLink" to="/" onClick={() => window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              })}>
             <h3 style={getStyle(3)}>HolyField</h3>
           </Link>
         </div>
@@ -53,6 +52,9 @@ function Nav() {
           </Link>
           <Link onClick={handleClick} className="webNavLinks" to="/about">
             About
+          </Link>
+          <Link onClick={handleClick} className="webNavLinks" to="/contact-us">
+            Contact
           </Link>
 
           <a className="webNavLinks" href="#contact">
@@ -67,32 +69,23 @@ function Nav() {
           </button>
         </div>
       </div>
-      <div
-        className={
-          isMenu
-            ? "mobileMenu-links-wrapper"
-            : "mobileMenu-links-wrapper isMobileLink"
-        }>
+      <div className={isMenu ? "mobileMenu-links-wrapper" : "mobileMenu-links-wrapper isMobileLink"}>
         <div className="mobileMenu-links-container">
-          <Link
-            onClick={handleClick}
-            className="webNavLinks webNavLinks-mobile"
-            to="/">
+          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/">
             Home
           </Link>
-          <Link
-            onClick={handleClick}
-            className="webNavLinks webNavLinks-mobile"
-            to="/about">
+          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/about">
             About
           </Link>
-          <a className="webNavLinks webNavLinks-mobile" href="#contact">
+          {/* <a className="webNavLinks webNavLinks-mobile" href="#contact">
             Contact
-          </a>
+          </a> */}
+          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/contact-us">
+            Contact
+          </Link>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
 
 export default Nav;

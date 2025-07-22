@@ -811,7 +811,7 @@
 
 
      position: relative;
-  }
+ }
 
  .isCallCloseButtonWrapper {
      display: flex;
@@ -1057,11 +1057,16 @@
          flex-direction: column;
          background-color: white;
          padding: 50px 20px;
-         border-radius: 20px;
+         border-radius: 2px;
+     }
+
+     .home-s-content-wrapper-1 p {
+         width: 100%;
      }
 
      .home-booking-button-wrapper button {
          margin: auto;
+         width: 100%;
      }
 
      .home-s-content-wrapper {

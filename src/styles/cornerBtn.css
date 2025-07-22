@@ -11,7 +11,6 @@
 
     height: 60px;
     width: 60px;
-    /* border: 1px solid white; */
     border-radius: 50% 10px 50% 50%;
     z-index: 9999999999999999999999;
 }
@@ -25,9 +24,7 @@
     align-items: center;
     border: none;
     color: white;
-
     cursor: pointer;
-
 }
 
 .messageIcon {
@@ -49,10 +46,10 @@
     overflow: hidden;
     border: none;
 
-
-    background-color: rgb(0, 2, 17);
+    /* padding:  10px; */
+    background-color: rgba(0, 2, 17, 0.452);
     backdrop-filter: blur(5px);
-    border-radius: 20px;
+    /* border-radius: 10px; */
 }
 
 .cta-Clicked {
@@ -72,9 +69,9 @@
 }
 
 .cta-container {
-    height: 100%;
-    width: 100%;
-    padding: 10px;
+    height: 95%;
+    width: 95%;
+    /* padding: 10px; */
     display: flex;
     position: relative;
     align-items: flex-start;
@@ -86,14 +83,14 @@
 
 .whatsapp-btn-wrapper {
     background-color: #f9f9f9;
-    border-radius: 20px;
+    border-radius: 0px;
     display: flex;
     width: 100%;
     height: 60px;
     justify-content: center;
     align-items: center;
     padding: 20px;
-     gap: 10px;
+    gap: 10px;
     text-decoration: none;
 
     border: none;
@@ -121,7 +118,7 @@
     gap: 10px;
     width: 100%;
     background-color: #f9f9f9;
-    border-radius: 20px;
+    border-radius: 0px;
     padding: 20px;
 
     flex-direction: column;
@@ -196,14 +193,15 @@
 
 
 
-@media (max-width:900px) {  
-      .faq-question {
-    font-size: 1rem;
-}
+@media (max-width:900px) {
+    .faq-question {
+        font-size: 1rem;
+    }
 
-.faq-answer {
-    font-size: 0.9rem;
-}
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+
     .sideButtonWrapper {
         right: 20px;
         bottom: 60px;

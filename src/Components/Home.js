@@ -135,7 +135,7 @@ function Home() {
         <div className="section3-context-wrapper">
           <div data-aos="fade-up" className="section-3-container">
             <div className="section3-imageWrapper">
-              <img src={airport} alt="" />
+              <img src={finance} alt="" />
             </div>
             <h3 className="hs3-header">
               Tailored Solutions for All Your Everyday Financial Requirements
@@ -148,7 +148,7 @@ function Home() {
 
           <div data-aos="fade-up" className="section-3-container">
             <div className="section3-imageWrapper">
-              <img src={finance} alt="" />
+              <img src={airport} alt="" />
             </div>
             <h3 className="hs3-header">
               Reliable Assistance with Financial Endorsements and Supporting
@@ -234,7 +234,7 @@ function Home() {
               <div className="countdown-1">
                 <CountUp
                   from={0}
-                  to={35}
+                  to={20}
                   separator=","
                   direction="up"
                   duration={1}

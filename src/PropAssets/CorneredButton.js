@@ -13,7 +13,7 @@ function CorneredButton() {
         "HOLY-FIELD is a financial solutions company that leverages digital innovation to solve everyday financial challenges. We offer tailored financial support services including loan options, investment opportunities, flexible savings packages, and value-added utilities such as transfers and bill payments."
     },
     {
-      question: "How is HOLY-FIELD different from other fintech platforms?",
+      question: "How is HOLY-FIELD different from other Fintech platforms?",
       answer:
         "HOLY-FIELD stands out through its personalized services, fast processes, and outstanding customer experience:\n\n" +
         "• Personalized Services: From custom account numbers to flexible repayment options, we prioritize solutions that adapt to your needs. Services like Loan Friends and Pay For Me offer even more flexibility.\n\n" +
@@ -29,15 +29,16 @@ function CorneredButton() {
   ];
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggleFaq = (index) => {
+  const toggleFaq = index => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-  
+
   return (
     <div className="sideButtonWrapper">
       <button
         onClick={() => setIsButtonClicked(!isBtnClicked)}
-        className="sideButtonContainer">
+        className="sideButtonContainer"
+      >
         <AiOutlineMessage className="messageIcon" />
       </button>
 
@@ -46,28 +47,31 @@ function CorneredButton() {
           isBtnClicked
             ? "cta-context-wrapper"
             : "cta-context-wrapper cta-Clicked "
-        }>
-        <div className="cta-context-backgroundOverlay"></div>
+        }
+      >
+        <div className="cta-context-backgroundOverlay" />
         <div className="cta-container">
           <a
-            href="https://wa.me/2348123323899?text=Hi%2C%20my%20name%20is%20[Your%20Name].%20I%27m%20interested%20in%20learning%20more%20about%20your%20services%20and%20how%20you%20can%20assist%20me."
+            href="https://wa.me/2348123323899?text=Hi,%20I%27m%20interested%20in%20your%20services.%20My%20name%20is%20 "
             target="_blank"
             rel="noopener noreferrer"
-            className="whatsapp-btn-wrapper">
+            className="whatsapp-btn-wrapper"
+          >
             <TbBrandWhatsappFilled className="whatsappIcon" />
             <h2>Chat with Us on WhatsApp</h2>
           </a>
           <div className="faq-wrapper">
-            {faqs.map((faq, index) => (
+            {faqs.map((faq, index) =>
               <div key={index} className="faq-item">
                 <h3 onClick={() => toggleFaq(index)} className="faq-question">
                   {faq.question}
                 </h3>
-                {activeIndex === index && (
-                  <p className="faq-answer">{faq.answer}</p>
-                )}
+                {activeIndex === index &&
+                  <p className="faq-answer">
+                    {faq.answer}
+                  </p>}
               </div>
-            ))}
+            )}
           </div>{" "}
         </div>
       </div>
