@@ -10,8 +10,7 @@ function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  return (
-    <div className="footer-wrapper" id="contact">
+  return <div className="footer-wrapper" id="contact">
       <div className="footer-links-wrapper">
         <div className="footerLogoWrapper">
           <Link onClick={handleClick} className="footerLogoContainer">
@@ -29,20 +28,20 @@ function Footer() {
           <Link onClick={handleClick} to="/about" className="ql footerLink">
             About
           </Link>
-          
         </div>
 
         <div className="footer-links">
           <h2>Our Services</h2>
-          <p className="footerLink">Travel Processing Services </p>{" "}
-          <p className="footerLink">Financial Support For Visas</p>
+          <p className="footerLink">
+            Travel Processing Services{" "}
+          </p> <p className="footerLink">Financial Support For Visas</p>
           <p className="footerLink">Loan Services</p>
         </div>
 
         <div className="footer-links">
           <h2>Contact Us</h2>
           <Link onClick={handleClick} className="footerLink">
-            456 Example Ave, Melbourne VIC 3000 AU
+            Valley view plaza, 99 opebi allen{" "}
           </Link>
           <Link onClick={handleClick} className="footerLink">
             info@holyfield.com
@@ -53,7 +52,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footer-line"></div>
+      <div className="footer-line" />
       <div className="allRightsReserved">
         <p>All right reserved &copy; 2025 Holy-Field Inc</p>
         <div className="footer-otherLinks">
@@ -71,8 +70,7 @@ function Footer() {
           Holy <br /> Field
         </h1>
       </div>
-    </div>
-  );
+    </div>;
 }
 
 export default Footer;

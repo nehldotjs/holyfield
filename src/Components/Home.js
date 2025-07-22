@@ -39,7 +39,10 @@ function Home() {
   const getStyle = index => {
     const active = activeIndices.includes(index);
     const opacity = ["1", "1", "1", "1", "1", "1", "1", "1"];
-    return { transition: "all 1s ease-in-out", opacity: active ? opacity[index] : "0" };
+    return {
+      transition: "all 1s ease-in-out",
+      opacity: active ? opacity[index] : "0"
+    };
   };
 
   useEffect(() => {
@@ -371,9 +374,7 @@ function Home() {
               <div data-aos="fade-up" className="h7-subContactContainer">
                 <MdLocationOn color="#ff582b" />
                 <h3>office</h3>
-                <p className="addressLink">
-                  456 Example Ave, Melbourne VIC 3000 AU
-                </p>
+                <p className="addressLink">Valley view plaza, 99 opebi allen</p>
               </div>
             </div>
           </div>
