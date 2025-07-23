@@ -15,26 +15,28 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+const [activeIndices, setActiveIndices] = useState([]);
 
-  const [activeIndices, setActiveIndices] = useState([]);
-  useEffect(() => {
-    const delays = [300, 200, 500, 700, 1000, 1200, 1600, 1800];
-    setActiveIndices([]);
-    delays.forEach((delay, index) => {
-      setTimeout(() => {
-        setActiveIndices(prev => [...prev, index]);
-      }, delay);
-    });
-  }, []);
+useEffect(() => {
+  const delays = [300, 200, 500, 700,300, 200, 500, 700];
+  setActiveIndices([]); 
 
-  const getStyle = index => {
-    const active = activeIndices.includes(index);
-    const opacity = ["1", "1", "1", "1", "1", "1", "1", "1"];
-    return {
-      transition: "all 1s ease-in-out",
-      opacity: active ? opacity[index] : "0"
-    };
+  delays.forEach((delay, index) => {
+    setTimeout(() => {
+      setActiveIndices(prev => [...prev, index]);
+    }, delay);
+  });
+}, []);
+
+const getStyle = index => {
+  const active = activeIndices.includes(index);
+
+  return {
+    transition: "transform 0.8s ease, opacity 0.8s ease",
+    transform: active ? "translate(0, 0)" : "translate(-100px, 50px)", // from bottom-right
+    opacity: active ? 1 : 0,
   };
+};
 
   useEffect(() => {
     AOS.init({

@@ -97,7 +97,7 @@ function Home() {
         </div>
 
         <h1 style={getStyle(3)}>
-          Unlock New Opportunities with <br /> HolyField <br /> Your Gateway to Global
+          Unlock New Opportunities with HolyField <br /> Your Gateway to Global
           Possibilities
         </h1>
 
@@ -390,22 +390,28 @@ function Home() {
             <div className="h7-contact-wrapper">
               <div data-aos="fade-up" className="h7-subContactContainer">
                 <IoMdMail color="#006aff" />
+               <div>
                 <h3>Mail</h3>
                 <a href="mailto:info@holyfield.com" className="mailLink">
                   info@holyfield.com
                 </a>
+               </div>
               </div>
               <div data-aos="fade-up" className="h7-subContactContainer">
                 <FaPhoneAlt color="#a8d800" />
+                <div>
                 <h3>phone</h3>
                 <a href="#contact" className="phoneLink">
                   +234 812 332 3899
                 </a>
+                </div>
               </div>
               <div data-aos="fade-up" className="h7-subContactContainer">
                 <MdLocationOn color="#ff582b" />
+                <div>
                 <h3>office</h3>
                 <p className="addressLink">Valley view plaza, 99 opebi allen</p>
+                </div>
               </div>
             </div>
           </div>

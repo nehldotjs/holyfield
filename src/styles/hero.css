@@ -8,6 +8,7 @@
       justify-content: center;
       align-items: center;
       padding-top: 10%;
+      margin-bottom: 10%;
       flex-direction: column;
       margin: auto;
       margin-bottom: 50px;
@@ -23,7 +24,7 @@
       text-transform: uppercase;
       color: #4d4d4d;
       width: 100%;
-   }
+  }
 
   .hero-wrapper h1 br {
       display: none;
@@ -262,10 +263,10 @@
       height: 350px;
       width: 400px;
       display: flex;
-      background-color: #ff582b;
+      background-color: rgb(163, 163, 241);
       border-radius: 50%;
       position: absolute;
-      bottom: 0px;
+      bottom: -2px;
   }
 
   .h-section2-img-wrapper img {
@@ -746,11 +747,6 @@
   }
 
 
-
-
-
-
-
   /* _________________________________________________  */
 
   .h7-bottom-section {
@@ -758,6 +754,7 @@
       height: 50vh;
       justify-content: center;
       align-items: center;
+      margin-bottom: 100px;
 
   }
 
@@ -778,16 +775,20 @@
       width: 100%;
       height: 100%;
 
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: flex-start;
+      gap: 30px;
   }
 
   .h7-subContactContainer {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       width: 100%;
       height: auto;
-      gap: 10px;
+      gap: 20px;
+
+      justify-content: flex-start;
+      align-items: flex-start;
   }
 
   .h7-subContactContainer h3 {
@@ -813,7 +814,7 @@
       display: flex;
       width: 100%;
       height: 100%;
-      border-radius: 30px;
+      border-radius: 10px;
       overflow: hidden;
   }
 
@@ -940,20 +941,18 @@
       }
 
       .hero-wrapper h1 {
-          font-size: 15.5px;
+          font-size: 14.5px;
           font-weight: 900;
-          width: 100%;
+          width: 80%;
       }
 
       .hero-wrapper h1 br {
-          display: flex;
+          display: none;
       }
 
       .hero-wrapper .hero-paragraph-container {
           font-size: 14px;
           width: 80%;
-
-
       }
 
 
