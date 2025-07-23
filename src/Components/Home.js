@@ -57,25 +57,34 @@ function Home() {
     });
   }, []);
 
-  return (
-    <div className="home-wrapper">
+  return <div className="home-wrapper">
+      <div className="blobWrapper" style={getStyle(2)}>
+        <div className="blob">
+          <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" class="absolute top-[-100px] right-[-100px] w-[600px] h-[600px] -z-10 opacity-40 blur-2xl">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00FFC6" />
+                <stop offset="100%" stop-color="#005DFF" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#grad1)">
+              <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+        M500,320Q570,390,530,470Q490,550,410,550Q330,550,280,490Q230,430,230,360Q230,290,280,240Q330,190,410,210Q490,230,500,320Z;
+        M520,310Q600,390,520,470Q440,550,360,510Q280,470,250,390Q220,310,250,240Q280,170,360,190Q440,210,520,310Z;
+        M500,320Q570,390,530,470Q490,550,410,550Q330,550,280,490Q230,430,230,360Q230,290,280,240Q330,190,410,210Q490,230,500,320Z" />
+            </path>
+          </svg>
+        </div>
+      </div>
       <div className="hero-wrapper">
-        <div
-          style={getStyle(1)}
-          className="shapes-wrapper style={getStyle(4)} "
-        >
+        <div style={getStyle(1)} className="shapes-wrapper style={getStyle(4)} ">
           <div className="wavy-float">
             <div className="wavy-circle" />
           </div>
         </div>
 
-        <div className="blobWrapper" style={getStyle(2)}>
-          <div className="blob" />
-        </div>
-
         <h1 style={getStyle(3)}>
-          Unlock New Opportunities with <br /> HolyField — Your Gateway to
-          Global Possibilities
+          Unlock New Opportunities with <br /> HolyField — Your Gateway to Global Possibilities
         </h1>
 
         <div className="hero-paragraph-container">
@@ -98,8 +107,8 @@ function Home() {
             Support Crafted Just for You
           </h1>
           <p data-aos="fade-up">
-            Navigating the world of Finances can be complex. Our dedicated team
-            simplifies the process, ensuring you find the right Finance
+            Navigating the world of Finances can be complex. Our dedicated
+            team simplifies the process, ensuring you find the right Finance
             solution.
           </p>
           <div className="types-wrapper">
@@ -108,17 +117,18 @@ function Home() {
               <p>
                 We provide reliable financial support services tailored to
                 assist with your travel visa applications including essential
-                documentation such as account statements, verification letters,
-                and supporting financial credentials to strengthen your
-                application.
+                documentation such as account statements, verification
+                letters, and supporting financial credentials to strengthen
+                your application.
               </p>
             </div>
             <div className="type" data-aos="fade-up">
               <h2>Get Started</h2>
               <p>
                 Ready to begin your journey? Contact us today to discover how
-                our expert financial support and visa processing assistance can
-                simplify your travel plans and increase your chances of success!
+                our expert financial support and visa processing assistance
+                can simplify your travel plans and increase your chances of
+                success!
               </p>
             </div>
           </div>
@@ -156,8 +166,8 @@ function Home() {
               Travel Documents
             </p>
             <h3 className="hs3-header">
-              Our team ensures you have the necessary financial documents for a
-              successful Visa application.
+              Our team ensures you have the necessary financial documents for
+              a successful Visa application.
             </h3>
           </div>
 
@@ -166,8 +176,8 @@ function Home() {
               <img src={assist} alt="" />
             </div>
             <p>
-              Comprehensive Financial Support Services for Visa Applications and
-              Travel Needs
+              Comprehensive Financial Support Services for Visa Applications
+              and Travel Needs
             </p>
             <h3 className="hs3-header">
               We offer a range of loan options to meet your financial travel
@@ -181,70 +191,35 @@ function Home() {
             <div className="home-s-content-wrapper-1">
               <h1 data-aos="fade-right">our achievements</h1>
               <p data-aos="fade-right">
-                With a foundation built on over years of experience, we began as
-                a creative focused brand with one mission: to elevate businesses
-                through innovative digital transformation. Over the years, we’ve
-                grown into a trusted partner for ambitious brands, offering
-                strategy led design, branding, and digital solutions that drive
-                visibility, engagement, and growth.
+                With a foundation built on over years of experience, we began
+                as a creative focused brand with one mission: to elevate
+                businesses through innovative digital transformation. Over the
+                years, we’ve grown into a trusted partner for ambitious
+                brands, offering strategy led design, branding, and digital
+                solutions that drive visibility, engagement, and growth.
               </p>
-              <div
-                data-aos="fade-right"
-                className="home-booking-button-wrapper"
-              >
-                <button
-                  data-aos="fade-right"
-                  onClick={() => setIsCall(!isCall)}
-                  to="book-a-call-with-us"
-                >
+              <div data-aos="fade-right" className="home-booking-button-wrapper">
+                <button data-aos="fade-right" onClick={() => setIsCall(!isCall)} to="book-a-call-with-us">
                   book a call
                 </button>
               </div>
             </div>
             <div className="home-s-content-wrapper-2">
               <div className="countdown-1" data-aos="slide-right">
-                <CountUp
-                  from={0}
-                  to={300}
-                  separator=","
-                  direction="up"
-                  duration={1}
-                  className="count-up-text"
-                />
+                <CountUp from={0} to={300} separator="," direction="up" duration={1} className="count-up-text" />
                 <p>digital solutions delivered</p>
               </div>
 
               <div className="countdown-1" data-aos="slide-up">
-                <CountUp
-                  from={0}
-                  to={120}
-                  separator=","
-                  direction="up"
-                  duration={1}
-                  className="count-up-text"
-                />
+                <CountUp from={0} to={120} separator="," direction="up" duration={1} className="count-up-text" />
                 <p>successful collaboration </p>
               </div>
               <div className="countdown-1" data-aos="slide-left">
-                <CountUp
-                  from={0}
-                  to={2}
-                  separator=","
-                  direction="up"
-                  duration={1}
-                  className="count-up-text"
-                />
+                <CountUp from={0} to={2} separator="," direction="up" duration={1} className="count-up-text" />
                 <p>years of experience </p>
               </div>
               <div className="countdown-1" data-aos="slide-down">
-                <CountUp
-                  from={0}
-                  to={20}
-                  separator=","
-                  direction="up"
-                  duration={1}
-                  className="count-up-text"
-                />
+                <CountUp from={0} to={20} separator="," direction="up" duration={1} className="count-up-text" />
                 <p>brands created</p>
               </div>
             </div>
@@ -254,12 +229,12 @@ function Home() {
 
       <div className="home-section4">
         <div className="hs4-container1">
-          <p className="p-heading">Loan</p>
-          <h2>Explore Our Diverse Loan Services Today</h2>
-          <p className="text">
-            We offer a wide range of loan services tailored to meet your
-            financial needs. Whether you're looking for personal or experiences
-            financing, we have options that suit you.
+          <p data-aos="fade-left" className="p-heading">
+            Loan
+          </p>
+          <h2 data-aos="fade-up">Explore Our Diverse Loan Services Today</h2>
+          <p data-aos="fade-down" className="text">
+            We offer a wide range of loan services tailored to meet your financial needs. Whether you're looking for personal or experiences financing, we have options that suit you.
           </p>
         </div>
 
@@ -271,9 +246,9 @@ function Home() {
             <h2>Personal Loans for Every Need</h2>
             <p>
               Need a personal loan? We provide flexible solutions, competitive
-              rates, and an easy application. Whether for home improvement, debt
-              consolidation, or unexpected expenses, we're here to help you
-              achieve your financial goals.
+              rates, and an easy application. Whether for home improvement,
+              debt consolidation, or unexpected expenses, we're here to help
+              you achieve your financial goals.
             </p>
           </div>
           <div data-aos="fade-up" className="hs4-Context-wrapper">
@@ -309,13 +284,7 @@ function Home() {
             Your Trusted Partner in Finance Growth
           </h1>
           <p data-aos="fade-up" className="hs5-text">
-            Choosing Holy-Field means unlocking an expansive world of
-            opportunities that cater specifically to your aspirations. Our deep
-            expertise in visa processing, combined with comprehensive financial
-            support, guarantees a seamless and stress-free experience that is
-            meticulously tailored to meet your unique needs and goals. We are
-            dedicated to guiding you every step of the way, ensuring that all
-            your requirements are met with precision and care.
+            Choosing Holy-Field means unlocking an expansive world of opportunities that cater specifically to your aspirations. Our deep expertise in visa processing, combined with comprehensive financial support, guarantees a seamless and stress-free experience that is meticulously tailored to meet your unique needs and goals. We are dedicated to guiding you every step of the way, ensuring that all your requirements are met with precision and care.
           </p>
 
           <div className="hs5-sub-wrapper">
@@ -380,7 +349,9 @@ function Home() {
               <div data-aos="fade-up" className="h7-subContactContainer">
                 <MdLocationOn color="#ff582b" />
                 <h3>office</h3>
-                <p className="addressLink">Valley view plaza, 99 opebi allen</p>
+                <p className="addressLink">
+                  Valley view plaza, 99 opebi allen
+                </p>
               </div>
             </div>
           </div>
@@ -392,25 +363,17 @@ function Home() {
         </div>
       </div>
 
-      <div
-        className={
-          isCall ? "book-a-call-section isCallActive" : "book-a-call-section"
-        }
-      >
+      <div className={isCall ? "book-a-call-section isCallActive" : "book-a-call-section"}>
         <div className="bookingContainer">
           <div className="isCallCloseButtonWrapper">
-            <button
-              onClick={() => setIsCall(!isCall)}
-              className="call-cancel-button"
-            >
+            <button onClick={() => setIsCall(!isCall)} className="call-cancel-button">
               close
             </button>
           </div>
           <BookACall />
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
 
 export default Home;

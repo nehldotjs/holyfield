@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import "../styles/contact.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import contactSvg from "../Assets/svg/contact-us-svg.svg";
+import contactSvg from "../Assets/images/front-desk.png";
  
 export default function ContactPage() {
   const [formData, setFormData] = useState({
