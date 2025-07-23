@@ -77,6 +77,7 @@ export default function CountUp({
   );
 
   // Update the UI on spring value change
+  // Update the UI on spring value change
   useEffect(
     () => {
       const unsubscribe = springValue.on("change", latest => {
@@ -88,9 +89,11 @@ export default function CountUp({
           };
 
           const formatted = Intl.NumberFormat("en-US", options).format(latest);
-          ref.current.textContent = separator
+          const finalValue = separator
             ? formatted.replace(/,/g, separator)
             : formatted;
+
+          ref.current.textContent = `${finalValue}+`; // Add plus sign here
         }
       });
 

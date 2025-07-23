@@ -65,23 +65,14 @@ function Nav() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  return (
-    <div className="nav-wrapper " style={getStyle(1)}>
-      <div
-        className={
-          !scrollStopped ? "nav-container isNavDisplay" : "nav-container"
-        }
-      >
+  return <div className="nav-wrapper " style={getStyle(1)}>
+      <div className={!scrollStopped ? "nav-container isNavDisplay" : "nav-container"}>
         <div className="nav-logo-wrapper">
           <img style={getStyle(2)} src={Logo} alt="Holyfield logo" />
-          <Link
-            className="logoLink"
-            to="/"
-            onClick={() => {
+          <Link className="logoLink" to="/" onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
               setIsMenu(false);
-            }}
-          >
+            }}>
             <h3 style={getStyle(3)}>HolyField</h3>
           </Link>
         </div>
@@ -107,40 +98,21 @@ function Nav() {
           </button>
         </div>
       </div>
-      <div
-        className={
-          isMenu
-            ? "mobileMenu-links-wrapper"
-            : "mobileMenu-links-wrapper isMobileLink"
-        }
-      >
-        <div className="mobileMenu-links-container">
-          <Link
-            onClick={handleClick}
-            className="webNavLinks webNavLinks-mobile"
-            to="/"
-          >
+      <div className={isMenu ? "mobileMenu-links-wrapper " : "mobileMenu-links-wrapper isMobileLink"}>
+        <div className={!scrollStopped ? "mobileMenu-links-container isNavDisplay" : "mobileMenu-links-container"}>
+          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/">
             Home
           </Link>
-          <Link
-            onClick={handleClick}
-            className="webNavLinks webNavLinks-mobile"
-            to="/about"
-          >
+          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/about">
             About
           </Link>
 
-          <Link
-            onClick={handleClick}
-            className="webNavLinks webNavLinks-mobile"
-            to="/contact-us"
-          >
+          <Link onClick={handleClick} className="webNavLinks webNavLinks-mobile" to="/contact-us">
             Contact
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
 
 export default Nav;
