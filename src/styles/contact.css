@@ -89,18 +89,7 @@
     color: green;
     font-weight: bold;
     margin-top: 20px;
-}
-
-.book-call-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    width: 100%;
-    height: auto;
-}
+} 
 
 .form-button {
     display: flex;

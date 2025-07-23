@@ -107,7 +107,7 @@ function Home() {
               <h2>Types of Visas</h2>
               <p>
                 We provide reliable financial support services tailored to
-                assist with your travel visa applications — including essential
+                assist with your travel visa applications including essential
                 documentation such as account statements, verification letters,
                 and supporting financial credentials to strengthen your
                 application.
@@ -130,66 +130,70 @@ function Home() {
       </div>
       <div className="home-section3">
         <h1 data-aos="fade-up" className="section3-header">
-          Comprehensive Financial Support Services for Your Visa Needs
+          Comprehensive Financial <br /> Support Services for Your Visa Needs
         </h1>
         <div className="section3-context-wrapper">
-          <div data-aos="fade-up" className="section-3-container">
+          <div data-aos="fade-left" className="section-3-container">
             <div className="section3-imageWrapper">
               <img src={finance} alt="" />
             </div>
-            <h3 className="hs3-header">
-              Tailored Solutions for All Your Everyday Financial Requirements
-            </h3>
             <p>
+              Tailored Solutions for All Your Everyday Financial Travel
+              Requirements
+            </p>
+            <h3 className="hs3-header">
               We provide essential documentation and financial support to
               facilitate your visa applications.
-            </p>
+            </h3>
           </div>
 
           <div data-aos="fade-up" className="section-3-container">
             <div className="section3-imageWrapper">
               <img src={airport} alt="" />
             </div>
-            <h3 className="hs3-header">
-              Reliable Assistance with Financial Endorsements and Supporting
-              Documents{" "}
-            </h3>
             <p>
+              Reliable Assistance with Financial Endorsements and Supporting
+              Travel Documents
+            </p>
+            <h3 className="hs3-header">
               Our team ensures you have the necessary financial documents for a
               successful Visa application.
-            </p>
+            </h3>
           </div>
 
-          <div data-aos="fade-up" className="section-3-container">
+          <div data-aos="fade-right" className="section-3-container">
             <div className="section3-imageWrapper">
               <img src={assist} alt="" />
             </div>
-            <h3 className="hs3-header">
+            <p>
               Comprehensive Financial Support Services for Visa Applications and
               Travel Needs
-            </h3>
-            <p>
+            </p>
+            <h3 className="hs3-header">
               We offer a range of loan options to meet your financial travel
               needs.
-            </p>
+            </h3>
           </div>
         </div>
-
         <div className="service-success">
-          <p>Delivering value</p>
+          <p data-aos="fade-right">Delivering value</p>
           <div className="home-s-content-wrapper">
             <div className="home-s-content-wrapper-1">
-              <h1>our achievements</h1>
-              <p>
+              <h1 data-aos="fade-right">our achievements</h1>
+              <p data-aos="fade-right">
                 With a foundation built on over years of experience, we began as
-                a creative-focused brand with one mission: to elevate businesses
+                a creative focused brand with one mission: to elevate businesses
                 through innovative digital transformation. Over the years, we’ve
                 grown into a trusted partner for ambitious brands, offering
-                strategy-led design, branding, and digital solutions that drive
+                strategy led design, branding, and digital solutions that drive
                 visibility, engagement, and growth.
               </p>
-              <div className="home-booking-button-wrapper">
+              <div
+                data-aos="fade-right"
+                className="home-booking-button-wrapper"
+              >
                 <button
+                  data-aos="fade-right"
                   onClick={() => setIsCall(!isCall)}
                   to="book-a-call-with-us"
                 >
@@ -198,7 +202,7 @@ function Home() {
               </div>
             </div>
             <div className="home-s-content-wrapper-2">
-              <div className="countdown-1">
+              <div className="countdown-1" data-aos="slide-right">
                 <CountUp
                   from={0}
                   to={300}
@@ -209,7 +213,8 @@ function Home() {
                 />
                 <p>digital solutions delivered</p>
               </div>
-              <div className="countdown-1">
+
+              <div className="countdown-1" data-aos="slide-up">
                 <CountUp
                   from={0}
                   to={120}
@@ -220,7 +225,7 @@ function Home() {
                 />
                 <p>successful collaboration </p>
               </div>
-              <div className="countdown-1">
+              <div className="countdown-1" data-aos="slide-left">
                 <CountUp
                   from={0}
                   to={2}
@@ -231,7 +236,7 @@ function Home() {
                 />
                 <p>years of experience </p>
               </div>
-              <div className="countdown-1">
+              <div className="countdown-1" data-aos="slide-down">
                 <CountUp
                   from={0}
                   to={20}
@@ -246,8 +251,9 @@ function Home() {
           </div>
         </div>
       </div>
+
       <div className="home-section4">
-        <div className="hs4-container1" data-aos="fade-up">
+        <div className="hs4-container1">
           <p className="p-heading">Loan</p>
           <h2>Explore Our Diverse Loan Services Today</h2>
           <p className="text">

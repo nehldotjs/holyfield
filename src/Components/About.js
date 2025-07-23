@@ -63,14 +63,14 @@ function About() {
             evolved into a trusted provider of flexible loan services and
             financial documentation support, committed to meeting the changing
             needs of our growing client base. At HolyField, we believe that
-            everyone should be empowered to pursue their goals—whether it's
+            everyone should be empowered to pursue their goals whether it's
             expanding a business, managing personal growth, or preparing for
             international opportunities. We deliver this empowerment through
             accessible loan offerings and strategic financial assistance
             designed to support a wide range of personal and professional
             ambitions. While we do not issue or guarantee visas, we provide
-            clients with key financial documentation—such as account summaries,
-            income validation, tax records, and corporate filings—to support a
+            clients with key financial documentation such as account summaries,
+            income validation, tax records, and corporate filings to support a
             wide range of personal, professional, and travel-related goals. With
             a clear commitment to excellence and client success, HolyField
             continues to be a reliable partner for individuals and enterprises
