@@ -992,8 +992,7 @@
           height: 300px;
           width: 300px;
           display: flex;
-          background-color: #ff582b;
-          border-radius: 50%;
+           border-radius: 50%;
           position: absolute;
           bottom: -0.8px;
       }
