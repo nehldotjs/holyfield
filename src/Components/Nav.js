@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../styles/nav.css";
 
 import Logo from "../Assets/images/3bf53f3da3d8c792b88e415ffe37d611fd47e0b296bcb588b656262e105731f5.svg";
@@ -10,6 +10,33 @@ import { MdOutlineConnectWithoutContact } from "react-icons/md";
 function Nav() {
   const [isMenu, setIsMenu] = useState(false);
   const [activeIndices, setActiveIndices] = useState([]);
+  const [scrollStopped, setScrollStopped] = useState(false);
+  const scrollTimeout = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollStopped(false); // scrolling is happening
+
+      // Clear previous timeout
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+
+      // Set timeout to trigger when scroll stops (e.g., after 200ms)
+      scrollTimeout.current = setTimeout(() => {
+        setScrollStopped(true); // scrolling has stopped
+      }, 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+    };
+  }, []);
 
   // Trigger sequential style on component mount
   useEffect(() => {
@@ -39,8 +66,12 @@ function Nav() {
   };
 
   return (
-    <div className="nav-wrapper" style={getStyle(1)}>
-      <div className="nav-container">
+    <div className="nav-wrapper " style={getStyle(1)}>
+      <div
+        className={
+          !scrollStopped ? "nav-container isNavDisplay" : "nav-container"
+        }
+      >
         <div className="nav-logo-wrapper">
           <img style={getStyle(2)} src={Logo} alt="Holyfield logo" />
           <Link
@@ -54,6 +85,7 @@ function Nav() {
             <h3 style={getStyle(3)}>HolyField</h3>
           </Link>
         </div>
+
         <div style={getStyle(4)} className="nav-web-links">
           <Link onClick={handleClick} className="webNavLinks" to="/">
             <GoHomeFill />

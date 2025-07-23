@@ -14,8 +14,9 @@
       margin-bottom: 50px;
       text-align: center;
       overflow: hidden;
-      gap: 40px;
+      gap: 40px; 
   }
+
 
   .hero-wrapper h1 {
       display: flex;
